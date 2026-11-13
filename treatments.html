@@ -32,7 +32,7 @@
           </ul>
         </nav>
 
-        <div class="ae-header-actions">
+                <div class="ae-header-actions">
           <button class="ae-action-btn ae-search-toggle-btn" title="Search Clinic" style="background: var(--ae-bg-light); border-color: var(--ae-border); color: var(--ae-secondary);">
             <i class="fas fa-search"></i>
           </button>
@@ -43,13 +43,44 @@
           <button class="ae-btn ae-btn-primary ae-header-cta ae-open-booking-btn">
             Book Appointment <i class="fas fa-arrow-right" style="font-size: 0.75rem;"></i>
           </button>
-          <button class="ae-menu-toggle" id="mobileMenuBtn" style="background: var(--ae-secondary); color: var(--ae-white);">
+          <button class="ae-menu-toggle" id="mobileMenuBtn" aria-label="Toggle Navigation" style="background: var(--ae-secondary); color: var(--ae-white);">
             <i class="fas fa-bars"></i>
           </button>
         </div>
       </div>
     </div>
   </header>
+
+  <!-- Mobile Offcanvas Drawer -->
+  <div class="ae-drawer-backdrop" id="mobileDrawer">
+    <div class="ae-drawer" style="max-width: 320px;">
+      <div class="ae-drawer-header">
+        <img src="assets/images/logo.svg" alt="Aesthetic" style="height: 32px;">
+        <button class="ae-modal-close-btn" id="mobileDrawerClose"><i class="fas fa-times"></i></button>
+      </div>
+      <div class="ae-drawer-body">
+        <ul style="display: flex; flex-direction: column; gap: 16px; font-size: 1.0625rem; font-weight: 500;">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about-us.html">About Clinic</a></li>
+          <li><a href="treatments.html">Treatments &amp; Procedures</a></li>
+          <li><a href="before-after.html">Before &amp; After Gallery</a></li>
+          <li><a href="doctors.html">Our Specialists</a></li>
+          <li><a href="pricing.html">Pricing &amp; Packages</a></li>
+          <li><a href="shop.html">Skincare Shop</a></li>
+          <li><a href="blog.html">Beauty Journal</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+        <div style="margin-top: 36px; padding-top: 24px; border-top: 1px solid var(--ae-border);">
+          <div style="font-size: 0.8125rem; color: var(--ae-text-muted); margin-bottom: 6px;">Concierge Line:</div>
+          <a href="tel:+18005552345" style="font-size: 1.125rem; font-weight: 600; color: var(--ae-secondary);">+1 (800) 555-2345</a>
+          <button class="ae-btn ae-btn-primary ae-open-booking-btn" style="width: 100%; margin-top: 20px;">
+            Book Consultation
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
 
   <!-- Page Banner -->
   <section style="background: url('assets/images/page-banner.jpg') center/cover no-repeat; padding: 160px 0 80px; position: relative;">
@@ -97,19 +128,132 @@
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer class="ae-footer" style="padding-top: 60px;">
+  <!-- ==========================================================================
+       Footer Section
+       ========================================================================== -->
+  <footer class="ae-footer">
     <div class="ae-container">
-      <div class="ae-footer-bottom" style="border: none; padding-bottom: 40px;">
+      <!-- Newsletter Bar -->
+      <div class="ae-newsletter-box">
+        <div class="ae-newsletter-text">
+          <span class="ae-sub-title" style="color: #E4C89F;">NEWSLETTER &amp; VIP CIRCLE</span>
+          <h3 class="ae-heading-md">Join Our Wellness Circle</h3>
+          <p>Receive mindful skincare advice, seasonal treatment privileges &amp; invitations to clinical events.</p>
+        </div>
+        <form class="ae-newsletter-form" id="newsletterForm">
+          <input type="email" id="newsletterEmail" class="ae-input" placeholder="Enter your email address..." required style="background: rgba(255, 255, 255, 0.12);">
+          <button type="submit" class="ae-btn ae-btn-primary" style="white-space: nowrap;">
+            Subscribe <i class="fas fa-paper-plane"></i>
+          </button>
+        </form>
+      </div>
+
+      <!-- Main Columns -->
+      <div class="ae-footer-grid">
+        <!-- Brand Col -->
+        <div class="ae-footer-col">
+          <img src="assets/images/logo-white.svg" alt="Aesthetic" style="height: 38px;">
+          <p class="ae-footer-brand-desc">Aesthetic represents the harmony of advanced medical science and refined artistic aesthetics. Delivering safe, customized treatments in a tranquil Beverly Hills sanctuary.</p>
+          <div class="ae-footer-socials">
+            <a href="https://instagram.com" class="ae-social-btn" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://facebook.com" class="ae-social-btn" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://youtube.com" class="ae-social-btn" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="https://tiktok.com" class="ae-social-btn" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+          </div>
+        </div>
+
+        <!-- Explore -->
+        <div class="ae-footer-col">
+          <h4>Explore</h4>
+          <div class="ae-footer-links">
+            <a href="about-us.html" class="ae-footer-link">About Clinic</a>
+            <a href="treatments.html" class="ae-footer-link">Treatments &amp; Services</a>
+            <a href="before-after.html" class="ae-footer-link">Before &amp; After</a>
+            <a href="doctors.html" class="ae-footer-link">Our Specialists</a>
+            <a href="pricing.html" class="ae-footer-link">Pricing Plans</a>
+          </div>
+        </div>
+
+        <!-- Specialty Procedures -->
+        <div class="ae-footer-col">
+          <h4>Treatments</h4>
+          <div class="ae-footer-links">
+            <a href="treatments.html#facial" class="ae-footer-link">Facial Rejuvenation</a>
+            <a href="treatments.html#body" class="ae-footer-link">Body Contouring</a>
+            <a href="treatments.html#laser" class="ae-footer-link">Fractional Laser</a>
+            <a href="treatments.html#injectables" class="ae-footer-link">Botox &amp; Dermal Fillers</a>
+            <a href="treatments.html#hydrafacial" class="ae-footer-link">HydraFacial Luxe</a>
+          </div>
+        </div>
+
+        <!-- Wellness -->
+        <div class="ae-footer-col">
+          <h4>Wellness</h4>
+          <div class="ae-footer-links">
+            <a href="shop.html" class="ae-footer-link">Clinical Skincare</a>
+            <a href="blog.html" class="ae-footer-link">Beauty Journal</a>
+            <a href="#faq" class="ae-footer-link">Patient FAQs</a>
+            <a href="contact.html" class="ae-footer-link">Sanctuary Map</a>
+            <a href="#appointment" class="ae-footer-link">Virtual Consultation</a>
+          </div>
+        </div>
+
+        <!-- Operating Hours & WhatsApp -->
+        <div class="ae-footer-col">
+          <h4>Concierge</h4>
+          <div style="font-size: 0.9375rem; color: rgba(255, 255, 255, 0.75); line-height: 1.7; margin-bottom: 14px;">
+            <div>Mon – Fri: 9:00 AM – 7:00 PM</div>
+            <div>Saturday: 10:00 AM – 5:00 PM</div>
+            <div>Sunday: Closed for Sanctuary Care</div>
+          </div>
+          <a href="#" class="ae-whatsapp-card" id="footerWhatsappTrigger">
+            <i class="fab fa-whatsapp ae-whatsapp-icon"></i>
+            <div class="ae-whatsapp-text">
+              <h6>Order on WhatsApp</h6>
+              <p>Instant orders &amp; inquiries</p>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <!-- Copyright Bottom Bar -->
+      <div class="ae-footer-bottom">
         <div>Copyright &copy; 2026 Aesthetic Medical Clinic. All Rights Reserved.</div>
         <div style="display: flex; gap: 20px;">
-          <a href="index.html" style="color: var(--ae-primary);">Home</a>
-          <a href="about-us.html" style="color: rgba(255,255,255,0.7);">About</a>
-          <a href="contact.html" style="color: rgba(255,255,255,0.7);">Contact</a>
+          <a href="#" style="color: rgba(255, 255, 255, 0.5);">Privacy Policy</a>
+          <a href="#" style="color: rgba(255, 255, 255, 0.5);">Terms of Treatment</a>
+          <a href="#" style="color: rgba(255, 255, 255, 0.5);">HIPAA Compliance</a>
         </div>
       </div>
     </div>
   </footer>
+
+  <!-- ==========================================================================
+       Interactive Modals & Slide-out Drawers
+       ========================================================================== -->
+
+  <!-- Slide-out Shopping Bag Drawer -->
+  <div class="ae-drawer-backdrop" id="cartDrawer">
+    <div class="ae-drawer">
+      <div class="ae-drawer-header">
+        <h4 style="font-size: 1.25rem;"><i class="fas fa-shopping-bag" style="color: var(--ae-primary); margin-right: 8px;"></i> Your Skincare Bag</h4>
+        <button class="ae-modal-close-btn" id="cartDrawerClose"><i class="fas fa-times"></i></button>
+      </div>
+      <div class="ae-drawer-body" id="cartItemsList">
+        <!-- Rendered by JS -->
+      </div>
+      <div class="ae-drawer-footer">
+        <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 18px;">
+          <span style="font-size: 1rem; color: var(--ae-text-muted);">Estimated Subtotal</span>
+          <span style="font-size: 1.5rem; font-weight: 600; color: var(--ae-secondary);" id="cartSubtotal">$0.00</span>
+        </div>
+        <p style="font-size: 0.8125rem; color: var(--ae-text-muted); margin-bottom: 18px;">Complimentary clinical express shipping &amp; two deluxe treatment samples included with all orders over $75.</p>
+        <button class="ae-btn ae-btn-primary" id="cartCheckoutBtn" style="width: 100%; padding: 14px;">
+          Proceed to Checkout <i class="fas fa-lock" style="font-size: 0.75rem;"></i>
+        </button>
+      </div>
+    </div>
+  </div>
 
   <!-- Book Appointment Modal -->
   <div class="ae-modal-backdrop" id="appointmentModal">
@@ -117,7 +261,8 @@
       <button class="ae-modal-close-btn" id="appointmentModalClose"><i class="fas fa-times"></i></button>
       <span class="ae-sub-title">APPOINTMENT SCHEDULING</span>
       <h3 class="ae-heading-md" style="margin-bottom: 8px;">Book Your Aesthetic Consultation</h3>
-      <p style="font-size: 0.9375rem; color: var(--ae-text-muted); margin-bottom: 24px;">Select your preferred procedure, specialist, and time.</p>
+      <p style="font-size: 0.9375rem; color: var(--ae-text-muted); margin-bottom: 24px;">Select your preferred procedure, specialist, and time. Our concierge will confirm your sanctuary reservation immediately.</p>
+
       <form id="appointmentForm">
         <div class="ae-form-grid">
           <div class="ae-form-group">
@@ -142,6 +287,28 @@
               <!-- Rendered by JS -->
             </select>
           </div>
+          <div class="ae-form-group full-width">
+            <label class="ae-form-label" style="color: var(--ae-secondary);">Preferred Specialist</label>
+            <select name="doctor" id="appointmentDoctor" class="ae-input" style="background: var(--ae-bg-light); border-color: var(--ae-border); color: var(--ae-secondary);">
+              <!-- Rendered by JS -->
+            </select>
+          </div>
+          <div class="ae-form-group">
+            <label class="ae-form-label" style="color: var(--ae-secondary);">Preferred Date</label>
+            <input type="date" name="date" class="ae-input" style="background: var(--ae-bg-light); border-color: var(--ae-border); color: var(--ae-secondary);">
+          </div>
+          <div class="ae-form-group">
+            <label class="ae-form-label" style="color: var(--ae-secondary);">Preferred Time Slot</label>
+            <select name="time" class="ae-input" style="background: var(--ae-bg-light); border-color: var(--ae-border); color: var(--ae-secondary);">
+              <option value="Morning (9:00 AM - 12:00 PM)">Morning (9:00 AM - 12:00 PM)</option>
+              <option value="Early Afternoon (12:00 PM - 3:00 PM)">Early Afternoon (12:00 PM - 3:00 PM)</option>
+              <option value="Late Afternoon (3:00 PM - 6:00 PM)">Late Afternoon (3:00 PM - 6:00 PM)</option>
+            </select>
+          </div>
+          <div class="ae-form-group full-width">
+            <label class="ae-form-label" style="color: var(--ae-secondary);">Medical / Aesthetic Notes</label>
+            <textarea name="notes" class="ae-input" placeholder="Any previous procedures or allergies we should know about..." style="background: var(--ae-bg-light); border-color: var(--ae-border); color: var(--ae-secondary); min-height: 80px;"></textarea>
+          </div>
         </div>
         <button type="submit" class="ae-btn ae-btn-primary" style="width: 100%; padding: 14px; margin-top: 10px;">
           Confirm Booking Request <i class="fas fa-calendar-check"></i>
@@ -150,6 +317,40 @@
     </div>
   </div>
 
+  <!-- Quick View Product Modal -->
+  <div class="ae-modal-backdrop" id="quickViewModal">
+    <div class="ae-modal-card" style="max-width: 820px;">
+      <button class="ae-modal-close-btn" id="quickViewClose"><i class="fas fa-times"></i></button>
+      <div id="quickViewBody">
+        <!-- Rendered by JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Live Search Modal -->
+  <div class="ae-modal-backdrop" id="searchModal">
+    <div class="ae-modal-card" style="max-width: 620px;">
+      <button class="ae-modal-close-btn" id="searchModalClose"><i class="fas fa-times"></i></button>
+      <span class="ae-sub-title">INSTANT SEARCH</span>
+      <h3 class="ae-heading-md" style="margin-bottom: 14px;">Search Procedures &amp; Skincare</h3>
+      <div style="position: relative; margin-bottom: 20px;">
+        <i class="fas fa-search" style="position: absolute; left: 18px; top: 50%; transform: translateY(-50%); color: var(--ae-text-muted);"></i>
+        <input type="text" id="searchInput" class="ae-input" placeholder="e.g. HydraFacial, Laser, Serum, Contouring..." style="padding-left: 48px; background: var(--ae-bg-light); border-color: var(--ae-border); color: var(--ae-secondary);">
+      </div>
+      <div id="searchResults" style="max-height: 380px; overflow-y: auto;">
+        <div style="text-align: center; color: var(--ae-text-muted); padding: 30px;">
+          Type at least 2 characters to search treatments and skincare essentials...
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Back to Top Button -->
+  <button class="ae-back-to-top" aria-label="Back to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <!-- Core Scripts -->
   <script src="assets/js/data.js"></script>
   <script src="assets/js/app.js"></script>
 </body>
