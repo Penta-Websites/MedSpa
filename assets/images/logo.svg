@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 64" fill="none">
-  <!-- Aesthetic emblem: elegant geometric petal & clinical cross -->
+  <!-- MedSpa emblem: elegant geometric petal & clinical cross -->
   <g transform="translate(4, 8)">
     <circle cx="24" cy="24" r="23" stroke="#B48E5A" stroke-width="1.5" stroke-dasharray="2 2" opacity="0.6"/>
     <circle cx="24" cy="24" r="18" stroke="#1A1A1A" stroke-width="1.2" opacity="0.8"/>
@@ -8,6 +8,6 @@
     <circle cx="24" cy="24" r="3" fill="#FFFFFF"/>
   </g>
   <!-- Wordmark -->
-  <text x="64" y="34" font-family="'Fraunces', serif" font-size="24" font-weight="500" letter-spacing="3" fill="#1A1A1A">AESTHETIC</text>
+  <text x="64" y="34" font-family="'Fraunces', serif" font-size="26" font-weight="500" letter-spacing="2.5" fill="#1A1A1A">MedSpa</text>
   <text x="66" y="48" font-family="'Figtree', sans-serif" font-size="8.5" font-weight="600" letter-spacing="3.2" fill="#B48E5A">CLINIC &amp; MEDICAL SPA</text>
 </svg>

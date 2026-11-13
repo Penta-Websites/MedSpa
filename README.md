@@ -1,6 +1,6 @@
-# Aesthetic — Luxury Medical & Cosmetic Clinic HTML5 Template
+# MedSpa — Luxury Medical Spa & Cosmetic Clinic HTML5 Template
 
-Aesthetic is a modern, standalone, zero-dependency HTML5/CSS3/Vanilla JS website template crafted for aesthetic medicine clinics, cosmetic surgeons, dermatology centers, medical spas, and wellness sanctuaries.
+MedSpa is a modern, standalone, zero-dependency HTML5/CSS3/Vanilla JS website template crafted for aesthetic medicine clinics, cosmetic surgeons, dermatology centers, medical spas, and wellness sanctuaries.
 
 Inspired by top-tier medical aesthetic experiences, it features clean semantic architecture, mobile-first responsive layouts, interactive procedure hotspots, draggable before & after transformation sliders, a slide-out shopping bag, a live treatment search modal, and an interactive appointment scheduling system.
 
@@ -51,7 +51,7 @@ Inspired by top-tier medical aesthetic experiences, it features clean semantic a
 ## 📁 Project Structure
 
 ```
-Aesthetic/
+MedSpa/
 ├── assets/
 │   ├── css/
 │   │   └── style.css            # Responsive luxury styles & CSS variables
@@ -91,8 +91,8 @@ Aesthetic/
 
 ## 🚀 Live Demo & Deployment
 
-- **Pixel-Force**: [https://pixel-force.github.io/Aesthetic/](https://pixel-force.github.io/Aesthetic/)
-- **Penta-Websites**: [https://penta-websites.github.io/Aesthetic/](https://penta-websites.github.io/Aesthetic/)
+- **Pixel-Force**: [https://pixel-force.github.io/MedSpa/](https://pixel-force.github.io/MedSpa/)
+- **Penta-Websites**: [https://penta-websites.github.io/MedSpa/](https://penta-websites.github.io/MedSpa/)
 
 ---
 

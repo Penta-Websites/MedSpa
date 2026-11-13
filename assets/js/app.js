@@ -585,7 +585,7 @@ document.addEventListener('DOMContentLoaded', () => {
       showToast('Your bag is currently empty.');
       return;
     }
-    const orderRef = 'AES-' + Math.floor(100000 + Math.random() * 900000);
+    const orderRef = 'MSP-' + Math.floor(100000 + Math.random() * 900000);
     showToast(`Order confirmed! Reference #${orderRef}`, 'fa-check-double');
     state.cart = [];
     updateCartUI();
@@ -641,7 +641,7 @@ document.addEventListener('DOMContentLoaded', () => {
     e.preventDefault();
     const formData = new FormData(appointmentForm);
     const bookingDetails = {
-      id: 'AES-' + Math.floor(10000 + Math.random() * 90000),
+      id: 'MSP-' + Math.floor(10000 + Math.random() * 90000),
       name: `${formData.get('firstName')} ${formData.get('lastName')}`,
       email: formData.get('email'),
       phone: formData.get('phone'),
@@ -842,7 +842,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // WhatsApp quick trigger
   $('#whatsappTrigger')?.addEventListener('click', (e) => {
     e.preventDefault();
-    window.open(`https://wa.me/18005552345?text=Hello%20Aesthetic%20Clinic,%20I%20would%20like%20to%20inquire%20about%20a%20consultation`, '_blank');
+    window.open(`https://wa.me/18005552345?text=Hello%20MedSpa%20Clinic,%20I%20would%20like%20to%20inquire%20about%20a%20consultation`, '_blank');
   });
 
   // Close modals on Escape key
@@ -865,5 +865,5 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  console.log('Aesthetic Clinic Application Initialized Successfully.');
+  console.log('MedSpa Clinic Application Initialized Successfully.');
 });

@@ -1,15 +1,15 @@
 /**
- * Aesthetic - Medical & Cosmetic Clinic Template Data
+ * MedSpa - Medical & Cosmetic Clinic Template Data
  * 100% Original Standalone Dataset (Zero WordPress dependencies)
  */
 
 const AESTHETIC_DATA = {
   clinicInfo: {
-    name: "Aesthetic",
-    tagline: "Medical & Cosmetic Aesthetic Clinic",
+    name: "MedSpa",
+    tagline: "Medical Spa & Aesthetic Clinic",
     phone: "+1 (800) 555-2345",
     whatsapp: "+1 (800) 555-2345",
-    email: "concierge@aesthetic-clinic.com",
+    email: "concierge@medspa-clinic.com",
     address: "742 Evergreen Terrace, Suite 400, Beverly Hills, CA 90210",
     hours: "Mon – Fri: 9:00 AM – 7:00 PM | Sat: 10:00 AM – 5:00 PM | Sun: Closed",
     socials: {
@@ -402,7 +402,7 @@ const AESTHETIC_DATA = {
     },
     {
       id: 3,
-      quote: "Aesthetic has completely elevated my skincare standards. From the moment you walk into the sanctuary of the clinic to the gentle expertise of the staff, it is pure medical luxury.",
+      quote: "MedSpa has completely elevated my skincare standards. From the moment you walk into the sanctuary of the clinic to the gentle expertise of the staff, it is pure medical luxury.",
       name: "Adriana Bennett",
       role: "Verified Patient — Laser Therapy & HydraFacial",
       rating: 5,
@@ -436,7 +436,7 @@ const AESTHETIC_DATA = {
     },
     {
       question: "Are your procedures safe and FDA-approved?",
-      answer: "Yes, without exception. All medical technologies, lasers, ultrasound machines, and injectable substances at Aesthetic are strictly FDA-cleared and administered solely by board-certified physicians or licensed master practitioners."
+      answer: "Yes, without exception. All medical technologies, lasers, ultrasound machines, and injectable substances at MedSpa are strictly FDA-cleared and administered solely by board-certified physicians or licensed master practitioners."
     },
     {
       question: "How far in advance should I schedule an appointment?",
