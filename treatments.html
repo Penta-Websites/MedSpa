@@ -12,38 +12,74 @@
 <body>
 
   <!-- Header -->
-  <header class="ae-header is-sticky">
+    <!-- ==========================================================================
+       Header & Navigation Bar
+       ========================================================================== -->
+  <header class="ae-header">
     <div class="ae-container">
       <div class="ae-header-inner">
+        <!-- Brand Logo -->
         <a href="index.html" class="ae-brand-logo">
-          <img src="assets/images/logo.svg" alt="Aesthetic Clinic" class="ae-logo-img ae-logo-dark" style="display: block;">
+          <img src="assets/images/logo.svg" alt="Aesthetic Clinic" class="ae-logo-img ae-logo-dark">
+          <img src="assets/images/logo-white.svg" alt="Aesthetic Clinic" class="ae-logo-img ae-logo-light">
         </a>
 
+        <!-- Desktop Navigation -->
         <nav class="ae-nav" aria-label="Main Navigation">
           <ul class="ae-nav-list">
-            <li class="ae-nav-item"><a href="index.html" class="ae-nav-link" style="color: var(--ae-secondary);">Home</a></li>
-            <li class="ae-nav-item"><a href="about-us.html" class="ae-nav-link" style="color: var(--ae-secondary);">About</a></li>
-            <li class="ae-nav-item active"><a href="treatments.html" class="ae-nav-link" style="color: var(--ae-secondary);">Treatments</a></li>
-            <li class="ae-nav-item"><a href="before-after.html" class="ae-nav-link" style="color: var(--ae-secondary);">Before &amp; After</a></li>
-            <li class="ae-nav-item"><a href="doctors.html" class="ae-nav-link" style="color: var(--ae-secondary);">Specialists</a></li>
-            <li class="ae-nav-item"><a href="pricing.html" class="ae-nav-link" style="color: var(--ae-secondary);">Pricing</a></li>
-            <li class="ae-nav-item"><a href="shop.html" class="ae-nav-link" style="color: var(--ae-secondary);">Shop</a></li>
-            <li class="ae-nav-item"><a href="contact.html" class="ae-nav-link" style="color: var(--ae-secondary);">Contact</a></li>
+            <li class="ae-nav-item">
+              <a href="index.html" class="ae-nav-link">Home <i class="fas fa-chevron-down" style="font-size: 0.65rem;"></i></a>
+              <div class="ae-dropdown">
+                <a href="index.html" class="ae-dropdown-link">Home Flagship</a>
+                <a href="index.html#silhouette" class="ae-dropdown-link">Body Contouring</a>
+                <a href="index.html#beforeAfter" class="ae-dropdown-link">Transformations</a>
+                <a href="index.html#treatments" class="ae-dropdown-link">Treatments Grid</a>
+              </div>
+            </li>
+            <li class="ae-nav-item">
+              <a href="about-us.html" class="ae-nav-link">About</a>
+            </li>
+            <li class="ae-nav-item active">
+              <a href="treatments.html" class="ae-nav-link">Treatments <i class="fas fa-chevron-down" style="font-size: 0.65rem;"></i></a>
+              <div class="ae-dropdown">
+                <a href="treatments.html" class="ae-dropdown-link">All Procedures</a>
+                <a href="treatments.html#facial" class="ae-dropdown-link">Facial Rejuvenation</a>
+                <a href="treatments.html#body" class="ae-dropdown-link">Body Sculpting</a>
+                <a href="treatments.html#laser" class="ae-dropdown-link">Laser Therapy</a>
+                <a href="treatments.html#injectables" class="ae-dropdown-link">Neuromodulators &amp; Fillers</a>
+              </div>
+            </li>
+            <li class="ae-nav-item">
+              <a href="before-after.html" class="ae-nav-link">Before &amp; After</a>
+            </li>
+            <li class="ae-nav-item">
+              <a href="doctors.html" class="ae-nav-link">Specialists</a>
+            </li>
+            <li class="ae-nav-item">
+              <a href="pricing.html" class="ae-nav-link">Pricing</a>
+            </li>
+            <li class="ae-nav-item">
+              <a href="shop.html" class="ae-nav-link">Shop</a>
+            </li>
+            <li class="ae-nav-item">
+              <a href="contact.html" class="ae-nav-link">Contact</a>
+            </li>
           </ul>
         </nav>
 
-                <div class="ae-header-actions">
-          <button class="ae-action-btn ae-search-toggle-btn" title="Search Clinic" style="background: var(--ae-bg-light); border-color: var(--ae-border); color: var(--ae-secondary);">
+        <!-- Header Actions -->
+        <div class="ae-header-actions">
+          <button class="ae-action-btn ae-search-toggle-btn" title="Search Clinic">
             <i class="fas fa-search"></i>
           </button>
-          <button class="ae-action-btn ae-cart-toggle-btn" title="Shopping Bag" style="background: var(--ae-bg-light); border-color: var(--ae-border); color: var(--ae-secondary);">
+          <button class="ae-action-btn ae-cart-toggle-btn" title="Shopping Bag">
             <i class="fas fa-shopping-bag"></i>
             <span class="ae-badge-count" style="display: none;">0</span>
           </button>
           <button class="ae-btn ae-btn-primary ae-header-cta ae-open-booking-btn">
             Book Appointment <i class="fas fa-arrow-right" style="font-size: 0.75rem;"></i>
           </button>
-          <button class="ae-menu-toggle" id="mobileMenuBtn" aria-label="Toggle Navigation" style="background: var(--ae-secondary); color: var(--ae-white);">
+          <button class="ae-menu-toggle" id="mobileMenuBtn" aria-label="Toggle Navigation">
             <i class="fas fa-bars"></i>
           </button>
         </div>

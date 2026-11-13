@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
      1. Header & Navigation (Sticky & Mobile Drawer)
      ========================================================================== */
   const header = $('.ae-header');
-  window.addEventListener('scroll', () => {
+  const handleHeaderScroll = () => {
     if (window.scrollY > 40) {
       header?.classList.add('is-sticky');
     } else {
@@ -63,7 +63,10 @@ document.addEventListener('DOMContentLoaded', () => {
         btt.classList.remove('is-visible');
       }
     }
-  });
+  };
+
+  window.addEventListener('scroll', handleHeaderScroll, { passive: true });
+  handleHeaderScroll();
 
   // Mobile Menu Drawer
   const menuToggle = $('.ae-menu-toggle');
