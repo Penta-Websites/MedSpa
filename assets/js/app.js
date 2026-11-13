@@ -1,19 +1,20 @@
 /**
- * Aesthetic - Medical & Cosmetic Clinic JavaScript Application
+ * MedSpa - Medical & Cosmetic Clinic JavaScript Application
  * Pure Vanilla JS | Zero Dependencies | Full Responsiveness
  */
 
 document.addEventListener('DOMContentLoaded', () => {
   // Check if data is loaded
-  if (typeof AESTHETIC_DATA === 'undefined') {
-    console.error('AESTHETIC_DATA not found. Please ensure data.js is loaded.');
+  const clinicData = (typeof MEDSPA_DATA !== 'undefined') ? MEDSPA_DATA : (typeof AESTHETIC_DATA !== 'undefined' ? AESTHETIC_DATA : null);
+  if (!clinicData) {
+    console.error('MedSpa data not found. Please ensure data.js is loaded.');
     return;
   }
 
   // State Management
   const state = {
-    cart: JSON.parse(localStorage.getItem('aesthetic_cart')) || [],
-    wishlist: JSON.parse(localStorage.getItem('aesthetic_wishlist')) || [],
+    cart: JSON.parse(localStorage.getItem('medspa_cart') || localStorage.getItem('aesthetic_cart')) || [],
+    wishlist: JSON.parse(localStorage.getItem('medspa_wishlist') || localStorage.getItem('aesthetic_wishlist')) || [],
     currentSlide: 0,
     slideInterval: null,
     currentCaseIndex: 0,
@@ -159,7 +160,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const hotspotCardFloat = $('#hotspotCardFloat');
 
   const updateHotspotDisplay = (hotspotId) => {
-    const data = AESTHETIC_DATA.hotspots.find(h => h.id === hotspotId);
+    const data = clinicData.hotspots.find(h => h.id === hotspotId);
     if (!data) return;
 
     hotspotPins.forEach(pin => {
@@ -209,8 +210,8 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // Init first hotspot
-  if (AESTHETIC_DATA.hotspots.length > 0) {
-    updateHotspotDisplay(AESTHETIC_DATA.hotspots[0].id);
+  if (clinicData.hotspots.length > 0) {
+    updateHotspotDisplay(clinicData.hotspots[0].id);
   }
 
   /* ==========================================================================
@@ -276,7 +277,7 @@ document.addEventListener('DOMContentLoaded', () => {
         baTabs.forEach(t => t.classList.remove('is-active'));
         tab.classList.add('is-active');
 
-        const caseData = AESTHETIC_DATA.beforeAfterCases[index];
+        const caseData = clinicData.beforeAfterCases[index];
         if (!caseData) return;
 
         state.currentCaseIndex = index;
@@ -303,8 +304,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const renderTreatments = (category = 'All') => {
     if (!treatmentsContainer) return;
     const filtered = category === 'All'
-      ? AESTHETIC_DATA.treatments
-      : AESTHETIC_DATA.treatments.filter(t => t.category.toLowerCase() === category.toLowerCase());
+      ? clinicData.treatments
+      : clinicData.treatments.filter(t => t.category.toLowerCase() === category.toLowerCase());
 
     treatmentsContainer.innerHTML = filtered.map(t => `
       <div class="ae-treatment-card">
@@ -346,7 +347,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const renderProducts = () => {
     if (!productContainer) return;
-    productContainer.innerHTML = AESTHETIC_DATA.products.map(p => `
+    productContainer.innerHTML = clinicData.products.map(p => `
       <div class="ae-product-card" data-id="${p.id}">
         <span class="ae-product-discount">${p.discount}</span>
         <div class="ae-product-img-box">
@@ -384,7 +385,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const quickViewBody = $('#quickViewBody');
 
   const openQuickView = (productId) => {
-    const product = AESTHETIC_DATA.products.find(p => p.id === productId);
+    const product = clinicData.products.find(p => p.id === productId);
     if (!product || !quickViewBody) return;
 
     quickViewBody.innerHTML = `
@@ -471,11 +472,11 @@ document.addEventListener('DOMContentLoaded', () => {
       </div>
     `).join('');
 
-    localStorage.setItem('aesthetic_cart', JSON.stringify(state.cart));
+    localStorage.setItem('medspa_cart', JSON.stringify(state.cart));
   };
 
   const addToCart = (productId) => {
-    const product = AESTHETIC_DATA.products.find(p => p.id === productId);
+    const product = clinicData.products.find(p => p.id === productId);
     if (!product) return;
 
     const existing = state.cart.find(item => item.id === productId);
@@ -540,7 +541,7 @@ document.addEventListener('DOMContentLoaded', () => {
         state.wishlist.push(pid);
         showToast('Saved to wishlist!', 'fa-heart');
       }
-      localStorage.setItem('aesthetic_wishlist', JSON.stringify(state.wishlist));
+      localStorage.setItem('medspa_wishlist', JSON.stringify(state.wishlist));
       return;
     }
 
@@ -605,14 +606,14 @@ document.addEventListener('DOMContentLoaded', () => {
   if (treatmentSelect) {
     treatmentSelect.innerHTML = `
       <option value="">Select Procedure / Treatment...</option>
-      ${AESTHETIC_DATA.treatments.map(t => `<option value="${t.title}">${t.title} (${t.price})</option>`).join('')}
+      ${clinicData.treatments.map(t => `<option value="${t.title}">${t.title} (${t.price})</option>`).join('')}
     `;
   }
 
   if (doctorSelect) {
     doctorSelect.innerHTML = `
       <option value="">Select Specialist (Optional)...</option>
-      ${AESTHETIC_DATA.doctors.map(d => `<option value="${d.name}">${d.name} — ${d.role}</option>`).join('')}
+      ${clinicData.doctors.map(d => `<option value="${d.name}">${d.name} — ${d.role}</option>`).join('')}
     `;
   }
 
@@ -653,9 +654,9 @@ document.addEventListener('DOMContentLoaded', () => {
       createdAt: new Date().toISOString()
     };
 
-    const bookings = JSON.parse(localStorage.getItem('aesthetic_bookings')) || [];
+    const bookings = JSON.parse(localStorage.getItem('medspa_bookings') || localStorage.getItem('aesthetic_bookings')) || [];
     bookings.push(bookingDetails);
-    localStorage.setItem('aesthetic_bookings', JSON.stringify(bookings));
+    localStorage.setItem('medspa_bookings', JSON.stringify(bookings));
 
     appointmentModal?.classList.remove('is-open');
     appointmentForm.reset();
@@ -681,7 +682,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const testimonialNext = $('#testimonialNext');
 
   const updateTestimonial = (index) => {
-    const item = AESTHETIC_DATA.testimonials[index];
+    const item = clinicData.testimonials[index];
     if (!item) return;
     if (testimonialText) testimonialText.textContent = `“${item.quote}”`;
     if (testimonialName) testimonialName.textContent = item.name;
@@ -691,12 +692,12 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   testimonialNext?.addEventListener('click', () => {
-    const nextIdx = (state.testimonialIndex + 1) % AESTHETIC_DATA.testimonials.length;
+    const nextIdx = (state.testimonialIndex + 1) % clinicData.testimonials.length;
     updateTestimonial(nextIdx);
   });
 
   testimonialPrev?.addEventListener('click', () => {
-    const prevIdx = (state.testimonialIndex - 1 + AESTHETIC_DATA.testimonials.length) % AESTHETIC_DATA.testimonials.length;
+    const prevIdx = (state.testimonialIndex - 1 + clinicData.testimonials.length) % clinicData.testimonials.length;
     updateTestimonial(prevIdx);
   });
 
@@ -705,7 +706,7 @@ document.addEventListener('DOMContentLoaded', () => {
      ========================================================================== */
   const accordionContainer = $('#faqAccordion');
   if (accordionContainer) {
-    accordionContainer.innerHTML = AESTHETIC_DATA.faqs.map((faq, idx) => `
+    accordionContainer.innerHTML = clinicData.faqs.map((faq, idx) => `
       <div class="ae-accordion-item ${idx === 0 ? 'is-open' : ''}">
         <button class="ae-accordion-header" type="button">
           <span>${faq.question}</span>
@@ -779,11 +780,11 @@ document.addEventListener('DOMContentLoaded', () => {
       return;
     }
 
-    const matchedTreatments = AESTHETIC_DATA.treatments.filter(t =>
+    const matchedTreatments = clinicData.treatments.filter(t =>
       t.title.toLowerCase().includes(q) || t.summary.toLowerCase().includes(q) || t.category.toLowerCase().includes(q)
     );
 
-    const matchedProducts = AESTHETIC_DATA.products.filter(p =>
+    const matchedProducts = clinicData.products.filter(p =>
       p.name.toLowerCase().includes(q) || p.description.toLowerCase().includes(q) || p.category.toLowerCase().includes(q)
     );
 

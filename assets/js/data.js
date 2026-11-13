@@ -3,7 +3,7 @@
  * 100% Original Standalone Dataset (Zero WordPress dependencies)
  */
 
-const AESTHETIC_DATA = {
+const MEDSPA_DATA = {
   clinicInfo: {
     name: "MedSpa",
     tagline: "Medical Spa & Aesthetic Clinic",
@@ -475,6 +475,13 @@ const AESTHETIC_DATA = {
   ]
 };
 
+const AESTHETIC_DATA = MEDSPA_DATA;
+
+if (typeof window !== 'undefined') {
+  window.MEDSPA_DATA = MEDSPA_DATA;
+  window.AESTHETIC_DATA = MEDSPA_DATA;
+}
+
 if (typeof module !== 'undefined' && module.exports) {
-  module.exports = AESTHETIC_DATA;
+  module.exports = MEDSPA_DATA;
 }

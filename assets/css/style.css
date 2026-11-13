@@ -2304,3 +2304,97 @@ textarea.ae-input {
     padding: 30px 20px;
   }
 }
+
+
+/* ============================================
+   Brand logo — the "Bloom" mark (animated)
+   ============================================ */
+.ae-brand-logo { flex: 0 0 auto; display: inline-flex; align-items: center; }
+.ae-logo {
+  width: auto;
+  aspect-ratio: 280 / 64;   /* inline SVG has no intrinsic size: keep it from collapsing in the flex header */
+  flex: 0 0 auto;
+  overflow: visible;
+  color: var(--ae-text-main);
+  --ae-logo-core: var(--ae-white);
+  transition: var(--ae-transition);
+}
+.ae-logo--light { color: var(--ae-white); --ae-logo-core: var(--ae-secondary); }
+
+.ae-lg-ring { fill: none; stroke: currentColor; stroke-width: 1; opacity: .18; }
+.ae-lg-dash {
+  fill: none; stroke: var(--ae-primary); stroke-width: 1; stroke-dasharray: 1.5 4.5; opacity: .6;
+  transform-origin: 24px 24px; animation: aeLogoSpin 26s linear infinite;
+}
+.ae-lg-arc {
+  fill: none; stroke: var(--ae-primary); stroke-width: 1.6; stroke-linecap: round;
+  transform-origin: 24px 24px; animation: aeLogoSpin 9s ease-in-out infinite;
+}
+.ae-lg-petals, .ae-lg-leaves {
+  transform-origin: 24px 24px;
+  transition: transform 1.1s cubic-bezier(.22, 1, .36, 1);
+}
+.ae-lg-petal {
+  fill: var(--ae-primary);
+  transform-origin: 24px 24px;
+  animation: aeLogoBreathe 6s ease-in-out infinite;
+}
+.ae-lg-petals g:nth-child(2) .ae-lg-petal { animation-delay: -1.5s; }
+.ae-lg-petals g:nth-child(3) .ae-lg-petal { animation-delay: -3s; }
+.ae-lg-petals g:nth-child(4) .ae-lg-petal { animation-delay: -4.5s; }
+.ae-lg-leaf {
+  fill: var(--ae-primary); opacity: .35;
+  transform-origin: 24px 24px;
+  animation: aeLogoBreathe 6s ease-in-out infinite reverse;
+}
+.ae-lg-halo {
+  fill: var(--ae-logo-core); opacity: .14;
+  transform-origin: 24px 24px; animation: aeLogoPulse 4.5s ease-in-out infinite;
+}
+.ae-lg-core { fill: var(--ae-logo-core); transform-origin: 24px 24px; transition: var(--ae-transition); }
+.ae-lg-orbit { transform-origin: 24px 24px; animation: aeLogoSpin 14s linear infinite; }
+.ae-lg-spark { fill: #E4C89F; animation: aeLogoTwinkle 3.2s ease-in-out infinite; }
+
+.ae-lg-name {
+  font-family: var(--ae-font-heading); font-size: 24px; font-weight: 500;
+  letter-spacing: 3px; fill: currentColor;
+  transition: letter-spacing .9s cubic-bezier(.22, 1, .36, 1);
+}
+.ae-lg-sub {
+  font-family: var(--ae-font-body); font-size: 8.5px; font-weight: 600;
+  letter-spacing: 3.2px; fill: var(--ae-primary);
+  transition: letter-spacing .9s cubic-bezier(.22, 1, .36, 1);
+}
+.ae-logo--light .ae-lg-sub { fill: #E4C89F; }
+
+/* the bloom opens on hover, and the scanning arc sweeps once */
+.ae-brand-logo:hover .ae-lg-petals,
+.ae-brand-logo:focus-visible .ae-lg-petals { transform: rotate(45deg) scale(1.06); }
+.ae-brand-logo:hover .ae-lg-leaves,
+.ae-brand-logo:focus-visible .ae-lg-leaves { transform: rotate(-45deg) scale(1.1); }
+.ae-brand-logo:hover .ae-lg-arc { animation-duration: 1.7s; stroke-width: 2; }
+.ae-brand-logo:hover .ae-lg-orbit { animation-duration: 3.4s; }
+.ae-brand-logo:hover .ae-lg-core { transform: scale(1.3); }
+.ae-brand-logo:hover .ae-lg-name { letter-spacing: 4.2px; }
+.ae-brand-logo:hover .ae-lg-sub { letter-spacing: 4px; }
+.ae-brand-logo:active .ae-lg-petals { transform: rotate(45deg) scale(.94); }
+
+/* the mark settles once the header turns solid on scroll */
+.ae-header .ae-logo { color: var(--ae-white); --ae-logo-core: var(--ae-secondary); }
+.ae-header.is-sticky .ae-logo { color: var(--ae-text-main); --ae-logo-core: var(--ae-white); }
+.ae-header.is-sticky .ae-lg-ring { opacity: .28; }
+
+@keyframes aeLogoSpin { to { transform: rotate(360deg); } }
+@keyframes aeLogoBreathe { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.07); } }
+@keyframes aeLogoPulse {
+  0%, 100% { transform: scale(1); opacity: .14; }
+  50% { transform: scale(1.45); opacity: .05; }
+}
+@keyframes aeLogoTwinkle { 0%, 100% { opacity: 1; } 50% { opacity: .35; } }
+
+@media (prefers-reduced-motion: reduce) {
+  .ae-lg-dash, .ae-lg-arc, .ae-lg-petal, .ae-lg-leaf, .ae-lg-halo, .ae-lg-orbit, .ae-lg-spark {
+    animation: none;
+  }
+  .ae-lg-petals, .ae-lg-leaves, .ae-lg-core, .ae-lg-name, .ae-lg-sub { transition: none; }
+}

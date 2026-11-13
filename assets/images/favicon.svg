@@ -1,6 +1,19 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
-  <rect width="64" height="64" rx="16" fill="#1A1A1A"/>
-  <circle cx="32" cy="32" r="28" stroke="#B48E5A" stroke-width="1.5" stroke-dasharray="2 2" opacity="0.6"/>
-  <path d="M32 10 C32 22 43 32 54 32 C43 32 32 42 32 54 C32 42 21 32 10 32 C21 32 32 22 32 10 Z" fill="#B48E5A"/>
-  <circle cx="32" cy="32" r="4" fill="#FFFFFF"/>
+  <title>Aesthetic</title>
+  <style>
+    .ae-lg-dash{transform-origin:32px 32px;animation:aeSpin 26s linear infinite}
+    .ae-lg-petal{transform-origin:32px 32px;animation:aeBreathe 6s ease-in-out infinite}
+    .ae-lg-orbit{transform-origin:32px 32px;animation:aeSpin 14s linear infinite}
+    @keyframes aeSpin{to{transform:rotate(360deg)}}
+    @keyframes aeBreathe{0%,100%{transform:scale(1)}50%{transform:scale(1.07)}}
+    @media (prefers-reduced-motion:reduce){*{animation:none!important}}
+  </style>
+  <rect width="64" height="64" rx="16" fill="#141615"/>
+  <circle class="ae-lg-dash" cx="32" cy="32" r="26" stroke="#B48E5A" stroke-width="1.2" stroke-dasharray="1.8 5" opacity=".6"/>
+  <g transform="translate(8 8) scale(1.333)">
+    <g opacity=".38" fill="#B48E5A"><path d="M24 24C20.8 20.6 20.6 15.4 23.3 11.6 26.9 14.6 27.6 19.9 24 24Z" transform="rotate(45 24 24)"/><path d="M24 24C20.8 20.6 20.6 15.4 23.3 11.6 26.9 14.6 27.6 19.9 24 24Z" transform="rotate(135 24 24)"/><path d="M24 24C20.8 20.6 20.6 15.4 23.3 11.6 26.9 14.6 27.6 19.9 24 24Z" transform="rotate(225 24 24)"/><path d="M24 24C20.8 20.6 20.6 15.4 23.3 11.6 26.9 14.6 27.6 19.9 24 24Z" transform="rotate(315 24 24)"/></g>
+    <g fill="#B48E5A"><g transform="rotate(0 24 24)"><path class="ae-lg-petal" d="M24 24C18.3 18.4 18.3 10.2 24 4.4 29.7 10.2 29.7 18.4 24 24Z"/></g><g transform="rotate(90 24 24)"><path class="ae-lg-petal" d="M24 24C18.3 18.4 18.3 10.2 24 4.4 29.7 10.2 29.7 18.4 24 24Z"/></g><g transform="rotate(180 24 24)"><path class="ae-lg-petal" d="M24 24C18.3 18.4 18.3 10.2 24 4.4 29.7 10.2 29.7 18.4 24 24Z"/></g><g transform="rotate(270 24 24)"><path class="ae-lg-petal" d="M24 24C18.3 18.4 18.3 10.2 24 4.4 29.7 10.2 29.7 18.4 24 24Z"/></g></g>
+  </g>
+  <circle cx="32" cy="32" r="4.2" fill="#FFFFFF"/>
+  <g class="ae-lg-orbit"><path d="M32 2.5 33.6 6.2 37.3 7.8 33.6 9.4 32 13.1 30.4 9.4 26.7 7.8 30.4 6.2Z" fill="#E4C89F"/></g>
 </svg>
