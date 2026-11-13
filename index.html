@@ -1,0 +1,916 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aesthetic — Medical &amp; Cosmetic Clinic</title>
+  <meta name="description" content="Aesthetic is a luxury medical aesthetic clinic specializing in facial rejuvenation, non-invasive body contouring, fractional laser therapies, and clinical skincare.">
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Core Stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- ==========================================================================
+       Header & Navigation Bar
+       ========================================================================== -->
+  <header class="ae-header">
+    <div class="ae-container">
+      <div class="ae-header-inner">
+        <!-- Brand Logo -->
+        <a href="index.html" class="ae-brand-logo">
+          <img src="assets/images/logo.svg" alt="Aesthetic Clinic" class="ae-logo-img ae-logo-dark">
+          <img src="assets/images/logo-white.svg" alt="Aesthetic Clinic" class="ae-logo-img ae-logo-light">
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav class="ae-nav" aria-label="Main Navigation">
+          <ul class="ae-nav-list">
+            <li class="ae-nav-item active">
+              <a href="index.html" class="ae-nav-link">Home <i class="fas fa-chevron-down" style="font-size: 0.65rem;"></i></a>
+              <div class="ae-dropdown">
+                <a href="index.html" class="ae-dropdown-link">Home Flagship <i class="fas fa-check" style="font-size: 0.75rem; color: var(--ae-primary);"></i></a>
+                <a href="#silhouette" class="ae-dropdown-link">Body Contouring</a>
+                <a href="#beforeAfter" class="ae-dropdown-link">Transformations</a>
+                <a href="#treatments" class="ae-dropdown-link">Treatments Grid</a>
+              </div>
+            </li>
+            <li class="ae-nav-item">
+              <a href="about-us.html" class="ae-nav-link">About</a>
+            </li>
+            <li class="ae-nav-item">
+              <a href="treatments.html" class="ae-nav-link">Treatments <i class="fas fa-chevron-down" style="font-size: 0.65rem;"></i></a>
+              <div class="ae-dropdown">
+                <a href="treatments.html" class="ae-dropdown-link">All Procedures</a>
+                <a href="treatments.html#facial" class="ae-dropdown-link">Facial Rejuvenation</a>
+                <a href="treatments.html#body" class="ae-dropdown-link">Body Sculpting</a>
+                <a href="treatments.html#laser" class="ae-dropdown-link">Laser Therapy</a>
+                <a href="treatments.html#injectables" class="ae-dropdown-link">Neuromodulators &amp; Fillers</a>
+              </div>
+            </li>
+            <li class="ae-nav-item">
+              <a href="before-after.html" class="ae-nav-link">Before &amp; After</a>
+            </li>
+            <li class="ae-nav-item">
+              <a href="doctors.html" class="ae-nav-link">Specialists</a>
+            </li>
+            <li class="ae-nav-item">
+              <a href="pricing.html" class="ae-nav-link">Pricing</a>
+            </li>
+            <li class="ae-nav-item">
+              <a href="shop.html" class="ae-nav-link">Shop</a>
+            </li>
+            <li class="ae-nav-item">
+              <a href="contact.html" class="ae-nav-link">Contact</a>
+            </li>
+          </ul>
+        </nav>
+
+        <!-- Header Actions -->
+        <div class="ae-header-actions">
+          <button class="ae-action-btn ae-search-toggle-btn" title="Search Clinic">
+            <i class="fas fa-search"></i>
+          </button>
+          <button class="ae-action-btn ae-cart-toggle-btn" title="Shopping Bag">
+            <i class="fas fa-shopping-bag"></i>
+            <span class="ae-badge-count" style="display: none;">0</span>
+          </button>
+          <button class="ae-btn ae-btn-primary ae-header-cta ae-open-booking-btn">
+            Book Appointment <i class="fas fa-arrow-right" style="font-size: 0.75rem;"></i>
+          </button>
+          <button class="ae-menu-toggle" id="mobileMenuBtn" aria-label="Toggle Navigation">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Offcanvas Drawer -->
+  <div class="ae-drawer-backdrop" id="mobileDrawer">
+    <div class="ae-drawer" style="max-width: 320px;">
+      <div class="ae-drawer-header">
+        <img src="assets/images/logo.svg" alt="Aesthetic" style="height: 32px;">
+        <button class="ae-modal-close-btn" id="mobileDrawerClose"><i class="fas fa-times"></i></button>
+      </div>
+      <div class="ae-drawer-body">
+        <ul style="display: flex; flex-direction: column; gap: 16px; font-size: 1.0625rem; font-weight: 500;">
+          <li><a href="index.html" style="color: var(--ae-primary);">Home</a></li>
+          <li><a href="about-us.html">About Clinic</a></li>
+          <li><a href="treatments.html">Treatments &amp; Procedures</a></li>
+          <li><a href="before-after.html">Before &amp; After Gallery</a></li>
+          <li><a href="doctors.html">Our Specialists</a></li>
+          <li><a href="pricing.html">Pricing &amp; Packages</a></li>
+          <li><a href="shop.html">Skincare Shop</a></li>
+          <li><a href="blog.html">Beauty Journal</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+        <div style="margin-top: 36px; padding-top: 24px; border-top: 1px solid var(--ae-border);">
+          <div style="font-size: 0.8125rem; color: var(--ae-text-muted); margin-bottom: 6px;">Concierge Line:</div>
+          <a href="tel:+18005552345" style="font-size: 1.125rem; font-weight: 600; color: var(--ae-secondary);">+1 (800) 555-2345</a>
+          <button class="ae-btn ae-btn-primary ae-open-booking-btn" style="width: 100%; margin-top: 20px;">
+            Book Consultation
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       Hero Slider Section
+       ========================================================================== -->
+  <section class="ae-hero-section">
+    <div class="ae-hero-slider">
+      <!-- Slide 1 -->
+      <div class="ae-hero-slide is-active" style="background-image: url('assets/images/hero-slide-1.jpg');">
+        <div class="ae-hero-overlay"></div>
+        <div class="ae-container">
+          <div class="ae-hero-content">
+            <span class="ae-hero-badge"><i class="fas fa-spa"></i> CLINICAL PRECISION &amp; ARTISTRY</span>
+            <h1 class="ae-heading-xl ae-hero-title">Restore Youthful Radiance.</h1>
+            <p class="ae-hero-desc">Advanced facial rejuvenation treatments that lift, tighten, and refresh — naturally and beautifully with zero downtime.</p>
+            <div class="ae-hero-actions">
+              <a href="#treatments" class="ae-btn ae-btn-outline-white">Explore Facial Treatments</a>
+              <button class="ae-btn ae-btn-primary ae-open-booking-btn">Book Appointment <i class="fas fa-arrow-right"></i></button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="ae-hero-slide" style="background-image: url('assets/images/hero-slide-2.jpg');">
+        <div class="ae-hero-overlay"></div>
+        <div class="ae-container">
+          <div class="ae-hero-content">
+            <span class="ae-hero-badge"><i class="fas fa-gem"></i> SCULPT &amp; DEFINE</span>
+            <h2 class="ae-heading-xl ae-hero-title">Contour Your Shape &amp; Silhouette.</h2>
+            <p class="ae-hero-desc">State-of-the-art non-invasive body contouring engineered to refine curves, firm dermal tissue, and restore confidence.</p>
+            <div class="ae-hero-actions">
+              <a href="#silhouette" class="ae-btn ae-btn-outline-white">Explore Body Contouring</a>
+              <button class="ae-btn ae-btn-primary ae-open-booking-btn">Book Appointment <i class="fas fa-arrow-right"></i></button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 3 -->
+      <div class="ae-hero-slide" style="background-image: url('assets/images/hero-slide-3.jpg');">
+        <div class="ae-hero-overlay"></div>
+        <div class="ae-container">
+          <div class="ae-hero-content">
+            <span class="ae-hero-badge"><i class="fas fa-award"></i> MEDICALLY VERIFIED OUTCOMES</span>
+            <h2 class="ae-heading-xl ae-hero-title">Where Science Meets Artistry.</h2>
+            <p class="ae-hero-desc">Customized aesthetic procedures delivered by board-certified physicians with zero compromise on comfort or natural harmony.</p>
+            <div class="ae-hero-actions">
+              <a href="#beforeAfter" class="ae-btn ae-btn-outline-white">View Transformations</a>
+              <button class="ae-btn ae-btn-primary ae-open-booking-btn">Meet Our Doctors <i class="fas fa-arrow-right"></i></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Hero Controls -->
+    <div class="ae-hero-controls">
+      <div class="ae-hero-bullet-group">
+        <span class="ae-hero-bullet is-active" data-index="0"></span>
+        <span class="ae-hero-bullet" data-index="1"></span>
+        <span class="ae-hero-bullet" data-index="2"></span>
+      </div>
+      <button class="ae-slider-btn" id="heroPrev" aria-label="Previous Slide"><i class="fas fa-chevron-left"></i></button>
+      <button class="ae-slider-btn" id="heroNext" aria-label="Next Slide"><i class="fas fa-chevron-right"></i></button>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       4 Core Pillars Bar
+       ========================================================================== -->
+  <section class="ae-pillars-section">
+    <div class="ae-container">
+      <div class="ae-pillars-card">
+        <div class="ae-pillars-grid">
+          <div class="ae-pillar-item">
+            <div class="ae-pillar-icon"><i class="fas fa-certificate"></i></div>
+            <h3 class="ae-pillar-title">Advanced Expertise</h3>
+            <p class="ae-pillar-desc">Certified medical specialists delivering precise, clinically trusted results.</p>
+          </div>
+          <div class="ae-pillar-item">
+            <div class="ae-pillar-icon"><i class="fas fa-microscope"></i></div>
+            <h3 class="ae-pillar-title">Cutting-Edge Tech</h3>
+            <p class="ae-pillar-desc">Modern, FDA-approved laser and radiofrequency equipment for every treatment.</p>
+          </div>
+          <div class="ae-pillar-item">
+            <div class="ae-pillar-icon"><i class="fas fa-feather"></i></div>
+            <h3 class="ae-pillar-title">Natural Results</h3>
+            <p class="ae-pillar-desc">Subtly enhancing your individual harmony — refined, timeless, and lasting.</p>
+          </div>
+          <div class="ae-pillar-item">
+            <div class="ae-pillar-icon"><i class="fas fa-hand-holding-heart"></i></div>
+            <h3 class="ae-pillar-title">Personalized Care</h3>
+            <p class="ae-pillar-desc">Tailored multi-stage plans designed around your unique anatomy and goals.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Philosophy & Brand Story
+       ========================================================================== -->
+  <section class="ae-philosophy-section" id="philosophy">
+    <div class="ae-container">
+      <div class="ae-philosophy-card">
+        <div class="ae-philosophy-layout">
+          <!-- Left Photo Stagger -->
+          <div class="ae-photo-col-left">
+            <img src="assets/images/philosophy-1.jpg" alt="Clinical Precision" class="ae-philo-img ae-philo-img-sm">
+            <img src="assets/images/philosophy-2.jpg" alt="Aesthetic Rejuvenation" class="ae-philo-img ae-philo-img-lg">
+          </div>
+
+          <!-- Center Brand Content & Animated Stamp -->
+          <div class="ae-philosophy-center">
+            <!-- Animated Rotating Circular Stamp -->
+            <div class="ae-stamp-badge">
+              <svg class="ae-stamp-circle-svg" viewBox="0 0 160 160">
+                <path id="stampTextPath" d="M 80, 80 m -60, 0 a 60,60 0 1,1 120,0 a 60,60 0 1,1 -120,0" fill="none"/>
+                <text font-size="12.5" font-family="'Figtree', sans-serif" font-weight="600" letter-spacing="3.5" fill="#4C5C68">
+                  <textPath href="#stampTextPath" startOffset="0%">
+                    BEST SERVICES • BEST SERVICES •
+                  </textPath>
+                </text>
+              </svg>
+              <div class="ae-stamp-inner">
+                <div class="ae-stamp-number">14+</div>
+                <div class="ae-stamp-label">Years of Care</div>
+              </div>
+            </div>
+
+            <span class="ae-sub-title">OUR PHILOSOPHY</span>
+            <h2 class="ae-heading-lg" style="margin-bottom: 1rem;">Where Science Meets Artistry</h2>
+            <p class="ae-philosophy-quote">“True beauty does not mimic; it uncovers and preserves the harmonious radiance that is uniquely yours.”</p>
+            <p class="ae-philosophy-text">At Aesthetic, we combine medical precision with an artistic eye for human anatomy. Our certified cosmetic surgeons and clinical dermatologists deliver safe, customized treatments using the latest technology — helping you look and feel your absolute best, naturally.</p>
+            <a href="about-us.html" class="ae-btn ae-btn-primary">Learn More About Us <i class="fas fa-arrow-right"></i></a>
+          </div>
+
+          <!-- Right Photo Stagger -->
+          <div class="ae-photo-col-right">
+            <img src="assets/images/philosophy-3.jpg" alt="Medical Technology" class="ae-philo-img ae-philo-img-lg">
+            <img src="assets/images/philosophy-4.jpg" alt="Luxury Clinic Interior" class="ae-philo-img ae-philo-img-sm">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Interactive Body Silhouette Contouring Section
+       ========================================================================== -->
+  <section class="ae-silhouette-section" id="silhouette">
+    <div class="ae-container">
+      <div class="ae-silhouette-container">
+        <!-- Info Card & Hotspot Switcher Buttons -->
+        <div class="ae-silhouette-info-card">
+          <div class="ae-silhouette-card-content">
+            <span class="ae-sub-title">BODY PLASTIC SURGERY &amp; SCULPTING</span>
+            <h2 class="ae-heading-lg" style="margin-bottom: 1rem;">Contour Your Shape &amp; Define Your Silhouette</h2>
+            <p class="ae-text-lead" style="margin-bottom: 1.5rem;">Experience tailored body contouring treatments designed to refine, sculpt, and enhance your natural silhouette using advanced non-surgical technologies and artistic precision.</p>
+            <p style="color: var(--ae-text-muted); font-size: 0.9375rem; margin-bottom: 2rem;">Click on the interactive markers on the model or choose a targeted area below to view dedicated treatment specifics, duration, and clinical pricing.</p>
+
+            <div class="ae-hotspots-interactive-panel">
+              <button class="ae-hotspot-pill-btn is-active" data-id="hotspot-face">
+                <div>
+                  <div class="ae-hotspot-btn-title">Face &amp; Non-Surgical Neck Lift</div>
+                  <div style="font-size: 0.8125rem; color: var(--ae-text-muted);">Ultrasound &amp; Deep RF Rejuvenation</div>
+                </div>
+                <span class="ae-hotspot-btn-meta">$450+</span>
+              </button>
+              <button class="ae-hotspot-pill-btn" data-id="hotspot-decollete">
+                <div>
+                  <div class="ae-hotspot-btn-title">Decollete &amp; Skin Tone Evening</div>
+                  <div style="font-size: 0.8125rem; color: var(--ae-text-muted);">Fractional Laser Pigmentation Cleansing</div>
+                </div>
+                <span class="ae-hotspot-btn-meta">$380+</span>
+              </button>
+              <button class="ae-hotspot-pill-btn" data-id="hotspot-waist">
+                <div>
+                  <div class="ae-hotspot-btn-title">High-Definition Silhouette Sculpting</div>
+                  <div style="font-size: 0.8125rem; color: var(--ae-text-muted);">Targeted Cryolipolysis &amp; Tissue Firming</div>
+                </div>
+                <span class="ae-hotspot-btn-meta">$650+</span>
+              </button>
+              <button class="ae-hotspot-pill-btn" data-id="hotspot-contour">
+                <div>
+                  <div class="ae-hotspot-btn-title">Cellulite Smoothing &amp; RF Sculpt</div>
+                  <div style="font-size: 0.8125rem; color: var(--ae-text-muted);">Thermal RF Septae Breakdown on Thighs</div>
+                </div>
+                <span class="ae-hotspot-btn-meta">$520+</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Visual Canvas with Pulse Markers -->
+        <div class="ae-silhouette-visual">
+          <img src="assets/images/body-silhouette.jpg" alt="Body Contouring Silhouette">
+
+          <!-- Hotspot Pins -->
+          <div class="ae-hotspot-pin is-active" data-id="hotspot-face" style="top: 14%; left: 48%;" title="Facial Rejuvenation">
+            <i class="fas fa-plus"></i>
+          </div>
+          <div class="ae-hotspot-pin" data-id="hotspot-decollete" style="top: 27%; left: 52%;" title="Decollete Treatment">
+            <i class="fas fa-plus"></i>
+          </div>
+          <div class="ae-hotspot-pin" data-id="hotspot-waist" style="top: 43%; left: 44%;" title="Waist Contouring">
+            <i class="fas fa-plus"></i>
+          </div>
+          <div class="ae-hotspot-pin" data-id="hotspot-contour" style="top: 62%; left: 54%;" title="Thigh Sculpting">
+            <i class="fas fa-plus"></i>
+          </div>
+
+          <!-- Dynamic Floating Card -->
+          <div class="ae-hotspot-card-float is-visible" id="hotspotCardFloat">
+            <!-- Dynamically populated by JS -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Draggable Before & After Comparison Showcase
+       ========================================================================== -->
+  <section class="ae-before-after-section" id="beforeAfter">
+    <div class="ae-container">
+      <div class="ae-section-header">
+        <div>
+          <span class="ae-sub-title">REAL PATIENT OUTCOMES</span>
+          <h2 class="ae-heading-lg">Transformative Clinical Results</h2>
+          <p class="ae-text-lead" style="max-width: 580px;">Drag the interactive divider left or right to inspect before and after transformations documented by our clinical photography department.</p>
+        </div>
+        <div class="ae-ba-tabs">
+          <button class="ae-ba-tab-btn is-active" data-index="0">Spa Facial</button>
+          <button class="ae-ba-tab-btn" data-index="1">Hair &amp; Scalp</button>
+          <button class="ae-ba-tab-btn" data-index="2">Laser Skin</button>
+          <button class="ae-ba-tab-btn" data-index="3">Acne Peeling</button>
+          <button class="ae-ba-tab-btn" data-index="4">Hair Gloss</button>
+        </div>
+      </div>
+
+      <!-- Comparison Slider Box -->
+      <div class="ae-comparison-slider-wrapper" id="aeComparisonSlider">
+        <!-- After Image (Background) -->
+        <img src="assets/images/comparison-1-after.jpg" alt="After Treatment" class="ae-comparison-image" id="comparisonAfterImg">
+        <span class="ae-comparison-badge after">After</span>
+
+        <!-- Before Image (Clipped Container) -->
+        <div class="ae-comparison-before-container" id="aeComparisonBeforeContainer">
+          <img src="assets/images/comparison-1-before.jpg" alt="Before Treatment" class="ae-comparison-image" id="comparisonBeforeImg">
+          <span class="ae-comparison-badge before">Before</span>
+        </div>
+
+        <!-- Draggable Handle Divider -->
+        <div class="ae-comparison-handle" id="aeComparisonHandle">
+          <div class="ae-handle-circle">
+            <i class="fas fa-arrows-alt-h"></i>
+          </div>
+        </div>
+      </div>
+
+      <!-- Case Details Summary -->
+      <div class="ae-comparison-info">
+        <div>
+          <h3 class="ae-comparison-title" id="baCaseTitle">Relax, Refresh, Renew — The Ultimate Spa Facial</h3>
+          <div class="ae-comparison-meta" id="baCaseMeta">6 Weeks (2 Sessions) | Hydra-Infusion &amp; Collagen Matrix Induction</div>
+        </div>
+        <div>
+          <button class="ae-btn ae-btn-primary ae-open-booking-btn">
+            Book Similar Treatment <i class="fas fa-arrow-right"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Treatments & Services Showcase
+       ========================================================================== -->
+  <section class="ae-treatments-section" id="treatments">
+    <div class="ae-container">
+      <div class="ae-section-header">
+        <div>
+          <span class="ae-sub-title">SPECIALTY CLINICAL PROTOCOLS</span>
+          <h2 class="ae-heading-lg">Signature Aesthetic Treatments</h2>
+          <p class="ae-text-lead" style="max-width: 580px;">Scientifically backed non-surgical treatments customized to your facial anatomy, skin type, and lifestyle.</p>
+        </div>
+        <div class="ae-ba-tabs">
+          <button class="ae-ba-tab-btn ae-treatment-filter-btn is-active" data-category="All">All</button>
+          <button class="ae-ba-tab-btn ae-treatment-filter-btn" data-category="Facial">Facial</button>
+          <button class="ae-ba-tab-btn ae-treatment-filter-btn" data-category="Body">Body</button>
+          <button class="ae-ba-tab-btn ae-treatment-filter-btn" data-category="Laser">Laser</button>
+          <button class="ae-ba-tab-btn ae-treatment-filter-btn" data-category="Injectables">Injectables</button>
+          <button class="ae-ba-tab-btn ae-treatment-filter-btn" data-category="Hair">Hair</button>
+        </div>
+      </div>
+
+      <!-- Cards Grid -->
+      <div class="ae-treatment-cards-grid" id="treatmentsContainer">
+        <!-- Rendered by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Clinical Skincare Essentials (Shop)
+       ========================================================================== -->
+  <section class="ae-products-section" id="shop">
+    <div class="ae-container">
+      <div class="ae-section-header">
+        <div>
+          <span class="ae-sub-title">HOMECARE REGIMEN</span>
+          <h2 class="ae-heading-lg">Shop Our Clinical Essentials</h2>
+          <p class="ae-text-lead" style="max-width: 580px;">Preserve and amplify clinic treatment outcomes with our pharmaceutical-grade serums, crèmes, and restorative botanicals.</p>
+        </div>
+        <div>
+          <a href="shop.html" class="ae-btn ae-btn-outline-dark">View Entire Collection <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <!-- Products Grid -->
+      <div class="ae-product-grid" id="productsContainer">
+        <!-- Rendered by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Testimonials Section
+       ========================================================================== -->
+  <section class="ae-testimonials-section" id="reviews">
+    <div class="ae-container">
+      <div class="ae-section-header-centered">
+        <span class="ae-sub-title">PATIENT STORIES</span>
+        <h2 class="ae-heading-lg">What Our Clients Say</h2>
+        <p class="ae-text-lead">Unfiltered reviews from patients who entrusted their aesthetic journey to our care.</p>
+      </div>
+
+      <div class="ae-testimonials-slider-wrap">
+        <div class="ae-testimonial-card">
+          <div class="ae-testimonial-stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <p class="ae-testimonial-quote" id="testimonialText">“Natural Results That Truly Last! I was nervous before my first treatment, but Dr. Vance and her team made me feel completely at ease. My skin feels firmer and noticeably brighter without looking artificial.”</p>
+          <div class="ae-testimonial-author">
+            <img src="assets/images/testimonial-1.jpg" alt="Patient Avatar" class="ae-testimonial-avatar" id="testimonialAvatar">
+            <div style="text-align: left;">
+              <h4 class="ae-testimonial-name" id="testimonialName">Genevieve Dubois</h4>
+              <div class="ae-testimonial-role" id="testimonialRole">Verified Patient — Facial Rejuvenation</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slider Navigation -->
+        <div style="display: flex; justify-content: center; gap: 14px; margin-top: 20px;">
+          <button class="ae-btn-icon" id="testimonialPrev" aria-label="Previous Review" style="border: 1px solid var(--ae-border);"><i class="fas fa-chevron-left"></i></button>
+          <button class="ae-btn-icon" id="testimonialNext" aria-label="Next Review" style="border: 1px solid var(--ae-border);"><i class="fas fa-chevron-right"></i></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Trusted Brand Partners Marquee
+       ========================================================================== -->
+  <section class="ae-brands-section">
+    <div class="ae-container" style="margin-bottom: 24px; text-align: center;">
+      <span class="ae-sub-title" style="margin-bottom: 0;">TRUSTED BY LEADING MEDICAL &amp; BEAUTY INNOVATORS</span>
+    </div>
+    <div class="ae-brands-track">
+      <div class="ae-brand-item"><img src="assets/images/brand-1.png" alt="Brand Partner"></div>
+      <div class="ae-brand-item"><img src="assets/images/brand-2.png" alt="Brand Partner"></div>
+      <div class="ae-brand-item"><img src="assets/images/brand-3.png" alt="Brand Partner"></div>
+      <div class="ae-brand-item"><img src="assets/images/brand-4.png" alt="Brand Partner"></div>
+      <div class="ae-brand-item"><img src="assets/images/brand-5.png" alt="Brand Partner"></div>
+      <div class="ae-brand-item"><img src="assets/images/brand-6.png" alt="Brand Partner"></div>
+      <div class="ae-brand-item"><img src="assets/images/brand-7.png" alt="Brand Partner"></div>
+      <div class="ae-brand-item"><img src="assets/images/brand-8.png" alt="Brand Partner"></div>
+      <!-- Duplicate track for infinite loop -->
+      <div class="ae-brand-item"><img src="assets/images/brand-1.png" alt="Brand Partner"></div>
+      <div class="ae-brand-item"><img src="assets/images/brand-2.png" alt="Brand Partner"></div>
+      <div class="ae-brand-item"><img src="assets/images/brand-3.png" alt="Brand Partner"></div>
+      <div class="ae-brand-item"><img src="assets/images/brand-4.png" alt="Brand Partner"></div>
+      <div class="ae-brand-item"><img src="assets/images/brand-5.png" alt="Brand Partner"></div>
+      <div class="ae-brand-item"><img src="assets/images/brand-6.png" alt="Brand Partner"></div>
+      <div class="ae-brand-item"><img src="assets/images/brand-7.png" alt="Brand Partner"></div>
+      <div class="ae-brand-item"><img src="assets/images/brand-8.png" alt="Brand Partner"></div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Clinic Visit & Interactive Booking
+       ========================================================================== -->
+  <section class="ae-booking-section" id="appointment">
+    <div class="ae-container">
+      <div class="ae-booking-card">
+        <!-- Visual & Direct Contact -->
+        <div class="ae-booking-visual">
+          <img src="assets/images/clinic-interior.jpg" alt="Aesthetic Clinic Suite">
+          <div class="ae-clinic-quick-info">
+            <div class="ae-quick-info-row">
+              <div class="ae-quick-icon"><i class="fas fa-phone-alt"></i></div>
+              <div class="ae-quick-text">
+                <h5>Concierge Telephone</h5>
+                <p>+1 (800) 555-2345</p>
+              </div>
+            </div>
+            <div class="ae-quick-info-row">
+              <div class="ae-quick-icon"><i class="fas fa-map-marker-alt"></i></div>
+              <div class="ae-quick-text">
+                <h5>Beverly Hills Sanctuary</h5>
+                <p>742 Evergreen Terrace, Suite 400</p>
+              </div>
+            </div>
+            <div class="ae-quick-info-row">
+              <div class="ae-quick-icon"><i class="fas fa-clock"></i></div>
+              <div class="ae-quick-text">
+                <h5>Hours of Operation</h5>
+                <p>Mon – Fri: 9am – 7pm | Sat: 10am – 5pm</p>
+              </div>
+            </div>
+            <a href="#" class="ae-whatsapp-card" id="whatsappTrigger" style="margin-top: 14px;">
+              <i class="fab fa-whatsapp ae-whatsapp-icon"></i>
+              <div class="ae-whatsapp-text">
+                <h6>Chat on WhatsApp</h6>
+                <p>Instant confidential consultation inquiries</p>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <!-- Booking Form -->
+        <div class="ae-booking-form-wrap">
+          <span class="ae-sub-title">VISIT OUR CLINIC</span>
+          <h2 class="ae-heading-lg">Request an Appointment</h2>
+          <p class="ae-text-lead">Experience personalized care in a calm, luxurious medical space designed around your comfort and absolute privacy.</p>
+
+          <form id="clinicContactForm">
+            <div class="ae-form-grid">
+              <div class="ae-form-group">
+                <label class="ae-form-label">First Name *</label>
+                <input type="text" name="firstName" class="ae-input" placeholder="e.g. Eleanor" required>
+              </div>
+              <div class="ae-form-group">
+                <label class="ae-form-label">Last Name *</label>
+                <input type="text" name="lastName" class="ae-input" placeholder="e.g. Vance" required>
+              </div>
+              <div class="ae-form-group">
+                <label class="ae-form-label">Email Address *</label>
+                <input type="email" name="email" class="ae-input" placeholder="eleanor@example.com" required>
+              </div>
+              <div class="ae-form-group">
+                <label class="ae-form-label">Phone Number *</label>
+                <input type="tel" name="phone" class="ae-input" placeholder="+1 (555) 000-0000" required>
+              </div>
+              <div class="ae-form-group full-width">
+                <label class="ae-form-label">Desired Treatment</label>
+                <select name="treatment" class="ae-input" style="color: var(--ae-secondary); background-color: var(--ae-white);">
+                  <option value="General Aesthetic Consultation">General Aesthetic Consultation</option>
+                  <option value="Facial Rejuvenation & Lift">Facial Rejuvenation &amp; Non-Surgical Lift ($350)</option>
+                  <option value="High-Definition Body Sculpting">High-Definition Body Sculpting ($650)</option>
+                  <option value="Fractional Laser Skin Resurfacing">Fractional Laser Skin Resurfacing ($420)</option>
+                  <option value="Neuromodulators & Dermal Fillers">Neuromodulators &amp; Dermal Fillers ($290)</option>
+                  <option value="Medical Grade HydraFacial Luxe">Medical Grade HydraFacial Luxe ($195)</option>
+                </select>
+              </div>
+              <div class="ae-form-group full-width">
+                <label class="ae-form-label">Personal Goals or Notes (Optional)</label>
+                <textarea name="notes" class="ae-input" placeholder="Please share any specific concerns, timeline requirements, or questions for the doctor..."></textarea>
+              </div>
+            </div>
+            <button type="submit" class="ae-btn ae-btn-primary" style="padding: 16px 36px; font-size: 1rem; width: 100%;">
+              Submit Appointment Request <i class="fas fa-check-circle"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Frequently Asked Questions
+       ========================================================================== -->
+  <section class="ae-faqs-section" id="faq">
+    <div class="ae-container">
+      <div class="ae-faq-layout">
+        <div>
+          <span class="ae-sub-title">TRANSPARENCY &amp; GUIDANCE</span>
+          <h2 class="ae-heading-lg" style="margin-bottom: 1rem;">Frequently Asked Questions</h2>
+          <p class="ae-text-lead" style="margin-bottom: 2rem;">Everything you need to know before stepping into our clinic for your treatment session.</p>
+          <div style="padding: 24px; background-color: var(--ae-bg-cream); border-radius: var(--ae-radius-md); border: 1px solid var(--ae-border);">
+            <h4 style="font-size: 1.125rem; margin-bottom: 8px;">Still have questions?</h4>
+            <p style="font-size: 0.875rem; color: var(--ae-text-muted); margin-bottom: 14px;">Our patient concierge is available 6 days a week to review your questions in complete confidence.</p>
+            <a href="contact.html" class="ae-btn ae-btn-outline-dark" style="font-size: 0.8125rem; padding: 8px 18px;">Contact Support</a>
+          </div>
+        </div>
+
+        <!-- Accordion Container -->
+        <div class="ae-accordion" id="faqAccordion">
+          <!-- Rendered by JS -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Beauty Journal & Clinical Insights
+       ========================================================================== -->
+  <section class="ae-blog-section" id="journal">
+    <div class="ae-container">
+      <div class="ae-section-header">
+        <div>
+          <span class="ae-sub-title">CLINICAL EDITORIAL</span>
+          <h2 class="ae-heading-lg">Latest Skincare &amp; Wellness Insights</h2>
+          <p class="ae-text-lead" style="max-width: 580px;">Evidence-based beauty advice, post-treatment care guides, and technological breakthroughs written by our specialists.</p>
+        </div>
+        <div>
+          <a href="blog.html" class="ae-btn ae-btn-outline-dark">Read All Articles <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <div class="ae-blog-grid">
+        <article class="ae-blog-card">
+          <img src="assets/images/blog-1.jpg" alt="Natural Skincare Products">
+          <div class="ae-blog-content">
+            <span class="ae-blog-category">Skin Care Tips</span>
+            <h3 class="ae-blog-title"><a href="blog.html">Revive Tired Skin with Refreshing Natural Skincare Protocols</a></h3>
+            <div class="ae-blog-meta">
+              <span><i class="far fa-calendar-alt"></i> June 29, 2026</span>
+              <span>•</span>
+              <span>5 min read</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="ae-blog-card">
+          <img src="assets/images/blog-2.jpg" alt="Body Sculpting Insights">
+          <div class="ae-blog-content">
+            <span class="ae-blog-category">Body Aesthetics</span>
+            <h3 class="ae-blog-title"><a href="blog.html">The Science of Body Sculpting: How Non-Invasive Contouring Works</a></h3>
+            <div class="ae-blog-meta">
+              <span><i class="far fa-calendar-alt"></i> July 14, 2026</span>
+              <span>•</span>
+              <span>7 min read</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="ae-blog-card">
+          <img src="assets/images/blog-3.jpg" alt="Daily Habits of Dermatologists">
+          <div class="ae-blog-content">
+            <span class="ae-blog-category">Clinical Insights</span>
+            <h3 class="ae-blog-title"><a href="blog.html">Achieving the Glass Skin Aesthetic: Daily Habits of Dermatologists</a></h3>
+            <div class="ae-blog-meta">
+              <span><i class="far fa-calendar-alt"></i> August 02, 2026</span>
+              <span>•</span>
+              <span>6 min read</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Footer Section
+       ========================================================================== -->
+  <footer class="ae-footer">
+    <div class="ae-container">
+      <!-- Newsletter Bar -->
+      <div class="ae-newsletter-box">
+        <div class="ae-newsletter-text">
+          <span class="ae-sub-title" style="color: #E4C89F;">NEWSLETTER &amp; VIP CIRCLE</span>
+          <h3 class="ae-heading-md">Join Our Wellness Circle</h3>
+          <p>Receive mindful skincare advice, seasonal treatment privileges &amp; invitations to clinical events.</p>
+        </div>
+        <form class="ae-newsletter-form" id="newsletterForm">
+          <input type="email" id="newsletterEmail" class="ae-input" placeholder="Enter your email address..." required style="background: rgba(255, 255, 255, 0.12);">
+          <button type="submit" class="ae-btn ae-btn-primary" style="white-space: nowrap;">
+            Subscribe <i class="fas fa-paper-plane"></i>
+          </button>
+        </form>
+      </div>
+
+      <!-- Main Columns -->
+      <div class="ae-footer-grid">
+        <!-- Brand Col -->
+        <div class="ae-footer-col">
+          <img src="assets/images/logo-white.svg" alt="Aesthetic" style="height: 38px;">
+          <p class="ae-footer-brand-desc">Aesthetic represents the harmony of advanced medical science and refined artistic aesthetics. Delivering safe, customized treatments in a tranquil Beverly Hills sanctuary.</p>
+          <div class="ae-footer-socials">
+            <a href="https://instagram.com" class="ae-social-btn" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://facebook.com" class="ae-social-btn" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://youtube.com" class="ae-social-btn" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="https://tiktok.com" class="ae-social-btn" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+          </div>
+        </div>
+
+        <!-- Explore -->
+        <div class="ae-footer-col">
+          <h4>Explore</h4>
+          <div class="ae-footer-links">
+            <a href="about-us.html" class="ae-footer-link">About Clinic</a>
+            <a href="treatments.html" class="ae-footer-link">Treatments &amp; Services</a>
+            <a href="before-after.html" class="ae-footer-link">Before &amp; After</a>
+            <a href="doctors.html" class="ae-footer-link">Our Specialists</a>
+            <a href="pricing.html" class="ae-footer-link">Pricing Plans</a>
+          </div>
+        </div>
+
+        <!-- Specialty Procedures -->
+        <div class="ae-footer-col">
+          <h4>Treatments</h4>
+          <div class="ae-footer-links">
+            <a href="treatments.html#facial" class="ae-footer-link">Facial Rejuvenation</a>
+            <a href="treatments.html#body" class="ae-footer-link">Body Contouring</a>
+            <a href="treatments.html#laser" class="ae-footer-link">Fractional Laser</a>
+            <a href="treatments.html#injectables" class="ae-footer-link">Botox &amp; Dermal Fillers</a>
+            <a href="treatments.html#hydrafacial" class="ae-footer-link">HydraFacial Luxe</a>
+          </div>
+        </div>
+
+        <!-- Wellness -->
+        <div class="ae-footer-col">
+          <h4>Wellness</h4>
+          <div class="ae-footer-links">
+            <a href="shop.html" class="ae-footer-link">Clinical Skincare</a>
+            <a href="blog.html" class="ae-footer-link">Beauty Journal</a>
+            <a href="#faq" class="ae-footer-link">Patient FAQs</a>
+            <a href="contact.html" class="ae-footer-link">Sanctuary Map</a>
+            <a href="#appointment" class="ae-footer-link">Virtual Consultation</a>
+          </div>
+        </div>
+
+        <!-- Operating Hours & WhatsApp -->
+        <div class="ae-footer-col">
+          <h4>Concierge</h4>
+          <div style="font-size: 0.9375rem; color: rgba(255, 255, 255, 0.75); line-height: 1.7; margin-bottom: 14px;">
+            <div>Mon – Fri: 9:00 AM – 7:00 PM</div>
+            <div>Saturday: 10:00 AM – 5:00 PM</div>
+            <div>Sunday: Closed for Sanctuary Care</div>
+          </div>
+          <a href="#" class="ae-whatsapp-card" id="footerWhatsappTrigger">
+            <i class="fab fa-whatsapp ae-whatsapp-icon"></i>
+            <div class="ae-whatsapp-text">
+              <h6>Order on WhatsApp</h6>
+              <p>Instant orders &amp; inquiries</p>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <!-- Copyright Bottom Bar -->
+      <div class="ae-footer-bottom">
+        <div>Copyright &copy; 2026 Aesthetic Medical Clinic. All Rights Reserved.</div>
+        <div style="display: flex; gap: 20px;">
+          <a href="#" style="color: rgba(255, 255, 255, 0.5);">Privacy Policy</a>
+          <a href="#" style="color: rgba(255, 255, 255, 0.5);">Terms of Treatment</a>
+          <a href="#" style="color: rgba(255, 255, 255, 0.5);">HIPAA Compliance</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       Interactive Modals & Slide-out Drawers
+       ========================================================================== -->
+
+  <!-- Slide-out Shopping Bag Drawer -->
+  <div class="ae-drawer-backdrop" id="cartDrawer">
+    <div class="ae-drawer">
+      <div class="ae-drawer-header">
+        <h4 style="font-size: 1.25rem;"><i class="fas fa-shopping-bag" style="color: var(--ae-primary); margin-right: 8px;"></i> Your Skincare Bag</h4>
+        <button class="ae-modal-close-btn" id="cartDrawerClose"><i class="fas fa-times"></i></button>
+      </div>
+      <div class="ae-drawer-body" id="cartItemsList">
+        <!-- Rendered by JS -->
+      </div>
+      <div class="ae-drawer-footer">
+        <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 18px;">
+          <span style="font-size: 1rem; color: var(--ae-text-muted);">Estimated Subtotal</span>
+          <span style="font-size: 1.5rem; font-weight: 600; color: var(--ae-secondary);" id="cartSubtotal">$0.00</span>
+        </div>
+        <p style="font-size: 0.8125rem; color: var(--ae-text-muted); margin-bottom: 18px;">Complimentary clinical express shipping &amp; two deluxe treatment samples included with all orders over $75.</p>
+        <button class="ae-btn ae-btn-primary" id="cartCheckoutBtn" style="width: 100%; padding: 14px;">
+          Proceed to Checkout <i class="fas fa-lock" style="font-size: 0.75rem;"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Book Appointment Modal -->
+  <div class="ae-modal-backdrop" id="appointmentModal">
+    <div class="ae-modal-card">
+      <button class="ae-modal-close-btn" id="appointmentModalClose"><i class="fas fa-times"></i></button>
+      <span class="ae-sub-title">APPOINTMENT SCHEDULING</span>
+      <h3 class="ae-heading-md" style="margin-bottom: 8px;">Book Your Aesthetic Consultation</h3>
+      <p style="font-size: 0.9375rem; color: var(--ae-text-muted); margin-bottom: 24px;">Select your preferred procedure, specialist, and time. Our concierge will confirm your sanctuary reservation immediately.</p>
+
+      <form id="appointmentForm">
+        <div class="ae-form-grid">
+          <div class="ae-form-group">
+            <label class="ae-form-label" style="color: var(--ae-secondary);">First Name *</label>
+            <input type="text" name="firstName" class="ae-input" placeholder="Eleanor" required style="background: var(--ae-bg-light); border-color: var(--ae-border); color: var(--ae-secondary);">
+          </div>
+          <div class="ae-form-group">
+            <label class="ae-form-label" style="color: var(--ae-secondary);">Last Name *</label>
+            <input type="text" name="lastName" class="ae-input" placeholder="Vance" required style="background: var(--ae-bg-light); border-color: var(--ae-border); color: var(--ae-secondary);">
+          </div>
+          <div class="ae-form-group">
+            <label class="ae-form-label" style="color: var(--ae-secondary);">Email Address *</label>
+            <input type="email" name="email" class="ae-input" placeholder="eleanor@example.com" required style="background: var(--ae-bg-light); border-color: var(--ae-border); color: var(--ae-secondary);">
+          </div>
+          <div class="ae-form-group">
+            <label class="ae-form-label" style="color: var(--ae-secondary);">Phone Number *</label>
+            <input type="tel" name="phone" class="ae-input" placeholder="+1 (555) 000-0000" required style="background: var(--ae-bg-light); border-color: var(--ae-border); color: var(--ae-secondary);">
+          </div>
+          <div class="ae-form-group full-width">
+            <label class="ae-form-label" style="color: var(--ae-secondary);">Select Treatment Procedure *</label>
+            <select name="treatment" id="appointmentTreatment" class="ae-input" required style="background: var(--ae-bg-light); border-color: var(--ae-border); color: var(--ae-secondary);">
+              <!-- Rendered by JS -->
+            </select>
+          </div>
+          <div class="ae-form-group full-width">
+            <label class="ae-form-label" style="color: var(--ae-secondary);">Preferred Specialist</label>
+            <select name="doctor" id="appointmentDoctor" class="ae-input" style="background: var(--ae-bg-light); border-color: var(--ae-border); color: var(--ae-secondary);">
+              <!-- Rendered by JS -->
+            </select>
+          </div>
+          <div class="ae-form-group">
+            <label class="ae-form-label" style="color: var(--ae-secondary);">Preferred Date</label>
+            <input type="date" name="date" class="ae-input" style="background: var(--ae-bg-light); border-color: var(--ae-border); color: var(--ae-secondary);">
+          </div>
+          <div class="ae-form-group">
+            <label class="ae-form-label" style="color: var(--ae-secondary);">Preferred Time Slot</label>
+            <select name="time" class="ae-input" style="background: var(--ae-bg-light); border-color: var(--ae-border); color: var(--ae-secondary);">
+              <option value="Morning (9:00 AM - 12:00 PM)">Morning (9:00 AM - 12:00 PM)</option>
+              <option value="Early Afternoon (12:00 PM - 3:00 PM)">Early Afternoon (12:00 PM - 3:00 PM)</option>
+              <option value="Late Afternoon (3:00 PM - 6:00 PM)">Late Afternoon (3:00 PM - 6:00 PM)</option>
+            </select>
+          </div>
+          <div class="ae-form-group full-width">
+            <label class="ae-form-label" style="color: var(--ae-secondary);">Medical / Aesthetic Notes</label>
+            <textarea name="notes" class="ae-input" placeholder="Any previous procedures or allergies we should know about..." style="background: var(--ae-bg-light); border-color: var(--ae-border); color: var(--ae-secondary); min-height: 80px;"></textarea>
+          </div>
+        </div>
+        <button type="submit" class="ae-btn ae-btn-primary" style="width: 100%; padding: 14px; margin-top: 10px;">
+          Confirm Booking Request <i class="fas fa-calendar-check"></i>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Quick View Product Modal -->
+  <div class="ae-modal-backdrop" id="quickViewModal">
+    <div class="ae-modal-card" style="max-width: 820px;">
+      <button class="ae-modal-close-btn" id="quickViewClose"><i class="fas fa-times"></i></button>
+      <div id="quickViewBody">
+        <!-- Rendered by JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Live Search Modal -->
+  <div class="ae-modal-backdrop" id="searchModal">
+    <div class="ae-modal-card" style="max-width: 620px;">
+      <button class="ae-modal-close-btn" id="searchModalClose"><i class="fas fa-times"></i></button>
+      <span class="ae-sub-title">INSTANT SEARCH</span>
+      <h3 class="ae-heading-md" style="margin-bottom: 14px;">Search Procedures &amp; Skincare</h3>
+      <div style="position: relative; margin-bottom: 20px;">
+        <i class="fas fa-search" style="position: absolute; left: 18px; top: 50%; transform: translateY(-50%); color: var(--ae-text-muted);"></i>
+        <input type="text" id="searchInput" class="ae-input" placeholder="e.g. HydraFacial, Laser, Serum, Contouring..." style="padding-left: 48px; background: var(--ae-bg-light); border-color: var(--ae-border); color: var(--ae-secondary);">
+      </div>
+      <div id="searchResults" style="max-height: 380px; overflow-y: auto;">
+        <div style="text-align: center; color: var(--ae-text-muted); padding: 30px;">
+          Type at least 2 characters to search treatments and skincare essentials...
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Back to Top Button -->
+  <button class="ae-back-to-top" aria-label="Back to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <!-- Core Scripts -->
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

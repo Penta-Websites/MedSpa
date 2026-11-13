@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Before &amp; After Gallery — Aesthetic Clinic</title>
+  <meta name="description" content="Explore documented transformations and clinical before and after patient case studies.">
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="ae-header is-sticky">
+    <div class="ae-container">
+      <div class="ae-header-inner">
+        <a href="index.html" class="ae-brand-logo">
+          <img src="assets/images/logo.svg" alt="Aesthetic Clinic" class="ae-logo-img ae-logo-dark" style="display: block;">
+        </a>
+
+        <nav class="ae-nav" aria-label="Main Navigation">
+          <ul class="ae-nav-list">
+            <li class="ae-nav-item"><a href="index.html" class="ae-nav-link" style="color: var(--ae-secondary);">Home</a></li>
+            <li class="ae-nav-item"><a href="about-us.html" class="ae-nav-link" style="color: var(--ae-secondary);">About</a></li>
+            <li class="ae-nav-item"><a href="treatments.html" class="ae-nav-link" style="color: var(--ae-secondary);">Treatments</a></li>
+            <li class="ae-nav-item active"><a href="before-after.html" class="ae-nav-link" style="color: var(--ae-secondary);">Before &amp; After</a></li>
+            <li class="ae-nav-item"><a href="doctors.html" class="ae-nav-link" style="color: var(--ae-secondary);">Specialists</a></li>
+            <li class="ae-nav-item"><a href="pricing.html" class="ae-nav-link" style="color: var(--ae-secondary);">Pricing</a></li>
+            <li class="ae-nav-item"><a href="shop.html" class="ae-nav-link" style="color: var(--ae-secondary);">Shop</a></li>
+            <li class="ae-nav-item"><a href="contact.html" class="ae-nav-link" style="color: var(--ae-secondary);">Contact</a></li>
+          </ul>
+        </nav>
+
+        <div class="ae-header-actions">
+          <button class="ae-btn ae-btn-primary ae-header-cta ae-open-booking-btn">
+            Book Appointment <i class="fas fa-arrow-right" style="font-size: 0.75rem;"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Page Banner -->
+  <section style="background: url('assets/images/page-banner.jpg') center/cover no-repeat; padding: 160px 0 80px; position: relative;">
+    <div style="position: absolute; inset: 0; background: linear-gradient(135deg, rgba(20,22,21,0.75), rgba(26,44,57,0.7));"></div>
+    <div class="ae-container" style="position: relative; z-index: 2; color: var(--ae-white); text-align: center;">
+      <span class="ae-sub-title" style="color: #F5EFE6;">CLINICAL EVIDENCE</span>
+      <h1 class="ae-heading-xl" style="color: var(--ae-white); margin-bottom: 12px;">Real Patient Transformations</h1>
+      <p class="ae-text-lead" style="color: rgba(255,255,255,0.85); max-width: 640px; margin: 0 auto;">Standardized medical photography showcasing the restorative efficacy of our signature protocols.</p>
+    </div>
+  </section>
+
+  <!-- Interactive Comparison Hero -->
+  <section style="padding: 80px 0; background: var(--ae-white);">
+    <div class="ae-container">
+      <div class="ae-section-header">
+        <div>
+          <span class="ae-sub-title">INTERACTIVE COMPARATOR</span>
+          <h2 class="ae-heading-lg">Featured Case Study</h2>
+          <p class="ae-text-lead">Slide the handle across the image to evaluate dermal texture refinement and contour enhancement.</p>
+        </div>
+        <div class="ae-ba-tabs">
+          <button class="ae-ba-tab-btn is-active" data-index="0">Spa Facial</button>
+          <button class="ae-ba-tab-btn" data-index="1">Hair Makeover</button>
+          <button class="ae-ba-tab-btn" data-index="2">Laser Skin</button>
+          <button class="ae-ba-tab-btn" data-index="3">Acne Peeling</button>
+          <button class="ae-ba-tab-btn" data-index="4">Hair Gloss</button>
+        </div>
+      </div>
+
+      <!-- Comparison Slider Box -->
+      <div class="ae-comparison-slider-wrapper" id="aeComparisonSlider">
+        <img src="assets/images/comparison-1-after.jpg" alt="After Treatment" class="ae-comparison-image" id="comparisonAfterImg">
+        <span class="ae-comparison-badge after">After</span>
+
+        <div class="ae-comparison-before-container" id="aeComparisonBeforeContainer">
+          <img src="assets/images/comparison-1-before.jpg" alt="Before Treatment" class="ae-comparison-image" id="comparisonBeforeImg">
+          <span class="ae-comparison-badge before">Before</span>
+        </div>
+
+        <div class="ae-comparison-handle" id="aeComparisonHandle">
+          <div class="ae-handle-circle"><i class="fas fa-arrows-alt-h"></i></div>
+        </div>
+      </div>
+
+      <div class="ae-comparison-info">
+        <div>
+          <h3 class="ae-comparison-title" id="baCaseTitle">Relax, Refresh, Renew — The Ultimate Spa Facial</h3>
+          <div class="ae-comparison-meta" id="baCaseMeta">6 Weeks (2 Sessions) | Hydra-Infusion &amp; Collagen Induction</div>
+        </div>
+        <button class="ae-btn ae-btn-primary ae-open-booking-btn">
+          Schedule Consultation <i class="fas fa-arrow-right"></i>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Complete Cases Grid -->
+  <section style="padding: 80px 0; background: var(--ae-bg-light);">
+    <div class="ae-container">
+      <div class="ae-section-header-centered">
+        <span class="ae-sub-title">CASE ARCHIVE</span>
+        <h2 class="ae-heading-lg">All Documented Procedures</h2>
+        <p class="ae-text-lead">Standardized clinical lighting with zero digital retouching or filters.</p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 40px;">
+        <!-- Case 1 -->
+        <div style="background: var(--ae-white); border-radius: var(--ae-radius-md); padding: 24px; border: 1px solid var(--ae-border);">
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 16px;">
+            <div style="position: relative;">
+              <img src="assets/images/comparison-1-before.jpg" alt="Before" style="border-radius: var(--ae-radius-sm); height: 260px; width: 100%; object-fit: cover;">
+              <span class="ae-comparison-badge before" style="top: 10px; left: 10px;">Before</span>
+            </div>
+            <div style="position: relative;">
+              <img src="assets/images/comparison-1-after.jpg" alt="After" style="border-radius: var(--ae-radius-sm); height: 260px; width: 100%; object-fit: cover;">
+              <span class="ae-comparison-badge after" style="top: 10px; right: 10px;">After</span>
+            </div>
+          </div>
+          <span class="ae-sub-title" style="margin-bottom: 4px; font-size: 0.75rem;">FACIAL SPA REJUVENATION</span>
+          <h4 style="font-size: 1.125rem; margin-bottom: 6px;">Relax, Refresh, Renew Protocol</h4>
+          <p style="font-size: 0.875rem; color: var(--ae-text-muted);">Restored dermal firmness, eliminated dry flakiness, and renewed deep luminous skin tone in 6 weeks.</p>
+        </div>
+
+        <!-- Case 2 -->
+        <div style="background: var(--ae-white); border-radius: var(--ae-radius-md); padding: 24px; border: 1px solid var(--ae-border);">
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 16px;">
+            <div style="position: relative;">
+              <img src="assets/images/comparison-2-before.jpg" alt="Before" style="border-radius: var(--ae-radius-sm); height: 260px; width: 100%; object-fit: cover;">
+              <span class="ae-comparison-badge before" style="top: 10px; left: 10px;">Before</span>
+            </div>
+            <div style="position: relative;">
+              <img src="assets/images/comparison-2-after.jpg" alt="After" style="border-radius: var(--ae-radius-sm); height: 260px; width: 100%; object-fit: cover;">
+              <span class="ae-comparison-badge after" style="top: 10px; right: 10px;">After</span>
+            </div>
+          </div>
+          <span class="ae-sub-title" style="margin-bottom: 4px; font-size: 0.75rem;">SCALP &amp; HAIR MAKEOVER</span>
+          <h4 style="font-size: 1.125rem; margin-bottom: 6px;">New Cut, New You Journey</h4>
+          <p style="font-size: 0.875rem; color: var(--ae-text-muted);">Immediate root hydration, lustrous texture restoration, and enhanced volume with zero heat damage.</p>
+        </div>
+
+        <!-- Case 3 -->
+        <div style="background: var(--ae-white); border-radius: var(--ae-radius-md); padding: 24px; border: 1px solid var(--ae-border);">
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 16px;">
+            <div style="position: relative;">
+              <img src="assets/images/comparison-3-before.jpg" alt="Before" style="border-radius: var(--ae-radius-sm); height: 260px; width: 100%; object-fit: cover;">
+              <span class="ae-comparison-badge before" style="top: 10px; left: 10px;">Before</span>
+            </div>
+            <div style="position: relative;">
+              <img src="assets/images/comparison-3-after.jpg" alt="After" style="border-radius: var(--ae-radius-sm); height: 260px; width: 100%; object-fit: cover;">
+              <span class="ae-comparison-badge after" style="top: 10px; right: 10px;">After</span>
+            </div>
+          </div>
+          <span class="ae-sub-title" style="margin-bottom: 4px; font-size: 0.75rem;">LASER DERMATOLOGY</span>
+          <h4 style="font-size: 1.125rem; margin-bottom: 6px;">From Stress to Serenity Journey</h4>
+          <p style="font-size: 0.875rem; color: var(--ae-text-muted);">Noticeably minimized pore circumference, resolved vascular redness, and created velvet texture in 4 weeks.</p>
+        </div>
+
+        <!-- Case 4 -->
+        <div style="background: var(--ae-white); border-radius: var(--ae-radius-md); padding: 24px; border: 1px solid var(--ae-border);">
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 16px;">
+            <div style="position: relative;">
+              <img src="assets/images/comparison-4-before.jpg" alt="Before" style="border-radius: var(--ae-radius-sm); height: 260px; width: 100%; object-fit: cover;">
+              <span class="ae-comparison-badge before" style="top: 10px; left: 10px;">Before</span>
+            </div>
+            <div style="position: relative;">
+              <img src="assets/images/comparison-4-after.jpg" alt="After" style="border-radius: var(--ae-radius-sm); height: 260px; width: 100%; object-fit: cover;">
+              <span class="ae-comparison-badge after" style="top: 10px; right: 10px;">After</span>
+            </div>
+          </div>
+          <span class="ae-sub-title" style="margin-bottom: 4px; font-size: 0.75rem;">MEDICAL FACIAL GLOW</span>
+          <h4 style="font-size: 1.125rem; margin-bottom: 6px;">Glow Up Journey from Bare Face</h4>
+          <p style="font-size: 0.875rem; color: var(--ae-text-muted);">Deep stubborn acne scar fading, balanced sebum secretion, and radiant youthful tone in 8 weeks.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="ae-footer" style="padding-top: 60px;">
+    <div class="ae-container">
+      <div class="ae-footer-bottom" style="border: none; padding-bottom: 40px;">
+        <div>Copyright &copy; 2026 Aesthetic Medical Clinic. All Rights Reserved.</div>
+        <div style="display: flex; gap: 20px;">
+          <a href="index.html" style="color: var(--ae-primary);">Home</a>
+          <a href="treatments.html" style="color: rgba(255,255,255,0.7);">Treatments</a>
+          <a href="contact.html" style="color: rgba(255,255,255,0.7);">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

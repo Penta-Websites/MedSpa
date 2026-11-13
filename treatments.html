@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Treatments &amp; Procedures — Aesthetic Clinic</title>
+  <meta name="description" content="Explore our menu of advanced facial rejuvenation, non-surgical body sculpting, laser resurfacing, and medical injectables.">
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="ae-header is-sticky">
+    <div class="ae-container">
+      <div class="ae-header-inner">
+        <a href="index.html" class="ae-brand-logo">
+          <img src="assets/images/logo.svg" alt="Aesthetic Clinic" class="ae-logo-img ae-logo-dark" style="display: block;">
+        </a>
+
+        <nav class="ae-nav" aria-label="Main Navigation">
+          <ul class="ae-nav-list">
+            <li class="ae-nav-item"><a href="index.html" class="ae-nav-link" style="color: var(--ae-secondary);">Home</a></li>
+            <li class="ae-nav-item"><a href="about-us.html" class="ae-nav-link" style="color: var(--ae-secondary);">About</a></li>
+            <li class="ae-nav-item active"><a href="treatments.html" class="ae-nav-link" style="color: var(--ae-secondary);">Treatments</a></li>
+            <li class="ae-nav-item"><a href="before-after.html" class="ae-nav-link" style="color: var(--ae-secondary);">Before &amp; After</a></li>
+            <li class="ae-nav-item"><a href="doctors.html" class="ae-nav-link" style="color: var(--ae-secondary);">Specialists</a></li>
+            <li class="ae-nav-item"><a href="pricing.html" class="ae-nav-link" style="color: var(--ae-secondary);">Pricing</a></li>
+            <li class="ae-nav-item"><a href="shop.html" class="ae-nav-link" style="color: var(--ae-secondary);">Shop</a></li>
+            <li class="ae-nav-item"><a href="contact.html" class="ae-nav-link" style="color: var(--ae-secondary);">Contact</a></li>
+          </ul>
+        </nav>
+
+        <div class="ae-header-actions">
+          <button class="ae-action-btn ae-search-toggle-btn" title="Search Clinic" style="background: var(--ae-bg-light); border-color: var(--ae-border); color: var(--ae-secondary);">
+            <i class="fas fa-search"></i>
+          </button>
+          <button class="ae-action-btn ae-cart-toggle-btn" title="Shopping Bag" style="background: var(--ae-bg-light); border-color: var(--ae-border); color: var(--ae-secondary);">
+            <i class="fas fa-shopping-bag"></i>
+            <span class="ae-badge-count" style="display: none;">0</span>
+          </button>
+          <button class="ae-btn ae-btn-primary ae-header-cta ae-open-booking-btn">
+            Book Appointment <i class="fas fa-arrow-right" style="font-size: 0.75rem;"></i>
+          </button>
+          <button class="ae-menu-toggle" id="mobileMenuBtn" style="background: var(--ae-secondary); color: var(--ae-white);">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Page Banner -->
+  <section style="background: url('assets/images/page-banner.jpg') center/cover no-repeat; padding: 160px 0 80px; position: relative;">
+    <div style="position: absolute; inset: 0; background: linear-gradient(135deg, rgba(20,22,21,0.75), rgba(26,44,57,0.7));"></div>
+    <div class="ae-container" style="position: relative; z-index: 2; color: var(--ae-white); text-align: center;">
+      <span class="ae-sub-title" style="color: #F5EFE6;">SIGNATURE SPECIALTIES</span>
+      <h1 class="ae-heading-xl" style="color: var(--ae-white); margin-bottom: 12px;">Clinical Treatments &amp; Procedures</h1>
+      <p class="ae-text-lead" style="color: rgba(255,255,255,0.85); max-width: 640px; margin: 0 auto;">Personalized aesthetic protocols engineered with medical rigor to lift, contour, restore, and rejuvenate.</p>
+    </div>
+  </section>
+
+  <!-- Treatments Catalog -->
+  <section style="padding: 80px 0; background: var(--ae-white);">
+    <div class="ae-container">
+      <div class="ae-section-header">
+        <div>
+          <span class="ae-sub-title">PROCEDURE DIRECTORY</span>
+          <h2 class="ae-heading-lg">Filter by Specialty</h2>
+        </div>
+        <div class="ae-ba-tabs">
+          <button class="ae-ba-tab-btn ae-treatment-filter-btn is-active" data-category="All">All Procedures</button>
+          <button class="ae-ba-tab-btn ae-treatment-filter-btn" data-category="Facial">Facial Aesthetics</button>
+          <button class="ae-ba-tab-btn ae-treatment-filter-btn" data-category="Body">Body Contouring</button>
+          <button class="ae-ba-tab-btn ae-treatment-filter-btn" data-category="Laser">Laser Dermatology</button>
+          <button class="ae-ba-tab-btn ae-treatment-filter-btn" data-category="Injectables">Injectables</button>
+          <button class="ae-ba-tab-btn ae-treatment-filter-btn" data-category="Hair">Hair &amp; Scalp</button>
+        </div>
+      </div>
+
+      <div class="ae-treatment-cards-grid" id="treatmentsContainer">
+        <!-- Rendered by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Treatment Consultation CTA -->
+  <section style="padding: 70px 0; background: var(--ae-bg-cream);">
+    <div class="ae-container" style="text-align: center; max-width: 760px;">
+      <span class="ae-sub-title">NOT SURE WHERE TO BEGIN?</span>
+      <h2 class="ae-heading-lg" style="margin-bottom: 1rem;">Book a Comprehensive 3D Skin Analysis</h2>
+      <p class="ae-text-lead" style="margin-bottom: 2rem;">Our multi-spectral imaging captures dermal hydration, subsurface pigmentation, and elasticity metrics to formulate your custom 6-month aesthetic blueprint.</p>
+      <button class="ae-btn ae-btn-primary ae-open-booking-btn">
+        Schedule Comprehensive Consultation <i class="fas fa-calendar-check"></i>
+      </button>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="ae-footer" style="padding-top: 60px;">
+    <div class="ae-container">
+      <div class="ae-footer-bottom" style="border: none; padding-bottom: 40px;">
+        <div>Copyright &copy; 2026 Aesthetic Medical Clinic. All Rights Reserved.</div>
+        <div style="display: flex; gap: 20px;">
+          <a href="index.html" style="color: var(--ae-primary);">Home</a>
+          <a href="about-us.html" style="color: rgba(255,255,255,0.7);">About</a>
+          <a href="contact.html" style="color: rgba(255,255,255,0.7);">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Book Appointment Modal -->
+  <div class="ae-modal-backdrop" id="appointmentModal">
+    <div class="ae-modal-card">
+      <button class="ae-modal-close-btn" id="appointmentModalClose"><i class="fas fa-times"></i></button>
+      <span class="ae-sub-title">APPOINTMENT SCHEDULING</span>
+      <h3 class="ae-heading-md" style="margin-bottom: 8px;">Book Your Aesthetic Consultation</h3>
+      <p style="font-size: 0.9375rem; color: var(--ae-text-muted); margin-bottom: 24px;">Select your preferred procedure, specialist, and time.</p>
+      <form id="appointmentForm">
+        <div class="ae-form-grid">
+          <div class="ae-form-group">
+            <label class="ae-form-label" style="color: var(--ae-secondary);">First Name *</label>
+            <input type="text" name="firstName" class="ae-input" placeholder="Eleanor" required style="background: var(--ae-bg-light); border-color: var(--ae-border); color: var(--ae-secondary);">
+          </div>
+          <div class="ae-form-group">
+            <label class="ae-form-label" style="color: var(--ae-secondary);">Last Name *</label>
+            <input type="text" name="lastName" class="ae-input" placeholder="Vance" required style="background: var(--ae-bg-light); border-color: var(--ae-border); color: var(--ae-secondary);">
+          </div>
+          <div class="ae-form-group">
+            <label class="ae-form-label" style="color: var(--ae-secondary);">Email Address *</label>
+            <input type="email" name="email" class="ae-input" placeholder="eleanor@example.com" required style="background: var(--ae-bg-light); border-color: var(--ae-border); color: var(--ae-secondary);">
+          </div>
+          <div class="ae-form-group">
+            <label class="ae-form-label" style="color: var(--ae-secondary);">Phone Number *</label>
+            <input type="tel" name="phone" class="ae-input" placeholder="+1 (555) 000-0000" required style="background: var(--ae-bg-light); border-color: var(--ae-border); color: var(--ae-secondary);">
+          </div>
+          <div class="ae-form-group full-width">
+            <label class="ae-form-label" style="color: var(--ae-secondary);">Select Treatment Procedure *</label>
+            <select name="treatment" id="appointmentTreatment" class="ae-input" required style="background: var(--ae-bg-light); border-color: var(--ae-border); color: var(--ae-secondary);">
+              <!-- Rendered by JS -->
+            </select>
+          </div>
+        </div>
+        <button type="submit" class="ae-btn ae-btn-primary" style="width: 100%; padding: 14px; margin-top: 10px;">
+          Confirm Booking Request <i class="fas fa-calendar-check"></i>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
