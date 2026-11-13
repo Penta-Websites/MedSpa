@@ -1,13 +1,25 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 64" fill="none">
-  <!-- Aesthetic emblem: elegant geometric petal & clinical cross -->
-  <g transform="translate(4, 8)">
-    <circle cx="24" cy="24" r="23" stroke="#B48E5A" stroke-width="1.5" stroke-dasharray="2 2" opacity="0.6"/>
-    <circle cx="24" cy="24" r="18" stroke="#1A1A1A" stroke-width="1.2" opacity="0.8"/>
-    <!-- Petals / Sparkle -->
-    <path d="M24 7 C24 16 33 24 41 24 C33 24 24 32 24 41 C24 32 15 24 7 24 C15 24 24 16 24 7 Z" fill="#B48E5A"/>
-    <circle cx="24" cy="24" r="3" fill="#FFFFFF"/>
-  </g>
-  <!-- Wordmark -->
-  <text x="64" y="34" font-family="'Fraunces', serif" font-size="24" font-weight="500" letter-spacing="3" fill="#1A1A1A">AESTHETIC</text>
-  <text x="66" y="48" font-family="'Figtree', sans-serif" font-size="8.5" font-weight="600" letter-spacing="3.2" fill="#B48E5A">CLINIC &amp; MEDICAL SPA</text>
+  <title>Aesthetic — Clinic &amp; Medical Spa</title>
+<style>
+  .ae-lg-ring{fill:none;stroke:#141615;stroke-width:1;opacity:.2}
+  .ae-lg-dash{fill:none;stroke:#B48E5A;stroke-width:1;stroke-dasharray:1.5 4.5;opacity:.6;transform-origin:24px 24px;animation:aeSpin 26s linear infinite}
+  .ae-lg-arc{fill:none;stroke:#B48E5A;stroke-width:1.6;stroke-linecap:round;transform-origin:24px 24px;animation:aeSpin 9s ease-in-out infinite}
+  .ae-lg-petal{fill:#B48E5A;transform-origin:24px 24px;animation:aeBreathe 6s ease-in-out infinite}
+  .ae-lg-petals g:nth-child(2) .ae-lg-petal{animation-delay:-1.5s}
+  .ae-lg-petals g:nth-child(3) .ae-lg-petal{animation-delay:-3s}
+  .ae-lg-petals g:nth-child(4) .ae-lg-petal{animation-delay:-4.5s}
+  .ae-lg-leaf{fill:#B48E5A;opacity:.35;transform-origin:24px 24px;animation:aeBreathe 6s ease-in-out infinite reverse}
+  .ae-lg-halo{fill:#FFFFFF;opacity:.14;transform-origin:24px 24px;animation:aePulse 4.5s ease-in-out infinite}
+  .ae-lg-core{fill:#FFFFFF}
+  .ae-lg-orbit{transform-origin:24px 24px;animation:aeSpin 14s linear infinite}
+  .ae-lg-spark{fill:#E4C89F;animation:aeTwinkle 3.2s ease-in-out infinite}
+  @keyframes aeSpin{to{transform:rotate(360deg)}}
+  @keyframes aeBreathe{0%,100%{transform:scale(1)}50%{transform:scale(1.07)}}
+  @keyframes aePulse{0%,100%{transform:scale(1);opacity:.14}50%{transform:scale(1.45);opacity:.05}}
+  @keyframes aeTwinkle{0%,100%{opacity:1}50%{opacity:.35}}
+  @media (prefers-reduced-motion:reduce){*{animation:none!important}}
+</style>
+  <g class="ae-lg-mark" transform="translate(4 8)"><circle class="ae-lg-ring" cx="24" cy="24" r="22.4"/><circle class="ae-lg-dash" cx="24" cy="24" r="22.4"/><path class="ae-lg-arc" d="M24 1.6A22.4 22.4 0 0 1 46.4 24"/><g class="ae-lg-leaves"><g transform="rotate(45 24 24)"><path class="ae-lg-leaf" d="M24 24C20.8 20.6 20.6 15.4 23.3 11.6 26.9 14.6 27.6 19.9 24 24Z"/></g><g transform="rotate(135 24 24)"><path class="ae-lg-leaf" d="M24 24C20.8 20.6 20.6 15.4 23.3 11.6 26.9 14.6 27.6 19.9 24 24Z"/></g><g transform="rotate(225 24 24)"><path class="ae-lg-leaf" d="M24 24C20.8 20.6 20.6 15.4 23.3 11.6 26.9 14.6 27.6 19.9 24 24Z"/></g><g transform="rotate(315 24 24)"><path class="ae-lg-leaf" d="M24 24C20.8 20.6 20.6 15.4 23.3 11.6 26.9 14.6 27.6 19.9 24 24Z"/></g></g><g class="ae-lg-petals"><g transform="rotate(0 24 24)"><path class="ae-lg-petal" d="M24 24C18.3 18.4 18.3 10.2 24 4.4 29.7 10.2 29.7 18.4 24 24Z"/></g><g transform="rotate(90 24 24)"><path class="ae-lg-petal" d="M24 24C18.3 18.4 18.3 10.2 24 4.4 29.7 10.2 29.7 18.4 24 24Z"/></g><g transform="rotate(180 24 24)"><path class="ae-lg-petal" d="M24 24C18.3 18.4 18.3 10.2 24 4.4 29.7 10.2 29.7 18.4 24 24Z"/></g><g transform="rotate(270 24 24)"><path class="ae-lg-petal" d="M24 24C18.3 18.4 18.3 10.2 24 4.4 29.7 10.2 29.7 18.4 24 24Z"/></g></g><circle class="ae-lg-halo" cx="24" cy="24" r="6.2"/><circle class="ae-lg-core" cx="24" cy="24" r="3.2"/><g class="ae-lg-orbit"><path class="ae-lg-spark" d="M24 0.2 25.25 3.05 28.1 4.3 25.25 5.55 24 8.4 22.75 5.55 19.9 4.3 22.75 3.05Z"/></g></g>
+  <text x="64" y="34" font-family="Fraunces, Georgia, serif" font-size="24" font-weight="500" letter-spacing="3" fill="#141615">AESTHETIC</text>
+  <text x="66" y="48" font-family="Figtree, Arial, sans-serif" font-size="8.5" font-weight="600" letter-spacing="3.2" fill="#B48E5A">CLINIC &amp; MEDICAL SPA</text>
 </svg>
