@@ -2309,8 +2309,11 @@ textarea.ae-input {
 /* ============================================
    Brand logo — the "Bloom" mark (animated)
    ============================================ */
+.ae-brand-logo { flex: 0 0 auto; display: inline-flex; align-items: center; }
 .ae-logo {
   width: auto;
+  aspect-ratio: 280 / 64;   /* inline SVG has no intrinsic size: keep it from collapsing in the flex header */
+  flex: 0 0 auto;
   overflow: visible;
   color: var(--ae-text-main);
   --ae-logo-core: var(--ae-white);
