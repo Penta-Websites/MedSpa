@@ -2,3 +2,6 @@
 Thumbs.db
 node_modules/
 *.log
+dist/
+Medspa-Clinic-Website-Guide.pdf
+brochure-source
